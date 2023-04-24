@@ -31,6 +31,10 @@
 	background: var(--accent);
 }
 
+.datepicker-input.in-edit:active, .datepicker-input.in-edit:focus {
+	box-shadow: none;
+}
+
 .textarea {
 	resize: none;
 	min-height: 120px;

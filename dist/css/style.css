@@ -1,4 +1,8 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input {
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */.mejs__button>button,a {
+    background-color: rgba(0,0,0,0)
+}
+
+button,hr,input {
     overflow: visible
 }
 
@@ -13,10 +17,6 @@ progress,sub,sup {
 
 .datepicker-picker,.swiper-vertical>.swiper-wrapper,body {
     flex-direction: column
-}
-
-.btn,.datepicker-controls .button,.datepicker-title,.header__nav--list>li,.mejs__captions-layer,.mejs__time,.mejs__time-float,.mejs__time-float-current,.section-header-content._center,.swiper-pagination,.swiper-zoom-container,.txt-center {
-    text-align: center
 }
 
 body {
@@ -35,10 +35,6 @@ hr {
 code,kbd,pre,samp {
     font-family: monospace,monospace;
     font-size: 1em
-}
-
-a {
-    background-color: rgba(0,0,0,0)
 }
 
 abbr[title] {
@@ -204,10 +200,6 @@ summary {
     transition-property: transform;
     transition-property: transform,-webkit-transform;
     display: block
-}
-
-.swiper-button-lock,.swiper-pagination-lock {
-    display: none
 }
 
 .swiper-slide-invisible-blank {
@@ -477,8 +469,13 @@ summary {
     content: "next"
 }
 
+.swiper-button-lock {
+    display: none
+}
+
 .swiper-pagination {
     position: absolute;
+    text-align: center;
     transition: .3s opacity;
     transform: translate3d(0,0,0);
     z-index: 10
@@ -659,6 +656,10 @@ button.swiper-pagination-bullet {
     top: 0
 }
 
+.swiper-pagination-lock {
+    display: none
+}
+
 .swiper-scrollbar {
     border-radius: var(--swiper-scrollbar-border-radius,10px);
     position: relative;
@@ -713,7 +714,8 @@ button.swiper-pagination-bullet {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    text-align: center
 }
 
 .swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg {
@@ -890,6 +892,10 @@ button.swiper-pagination-bullet {
     vertical-align: top
 }
 
+.btn,.datepicker-controls .button,.datepicker-title,.header__nav--list>li,.mejs__captions-layer,.mejs__time,.mejs__time-float,.mejs__time-float-current,.section-header-content._center,.txt-center {
+    text-align: center
+}
+
 .mejs__container video::-webkit-media-controls,.mejs__container video::-webkit-media-controls-panel,.mejs__container video::-webkit-media-controls-panel-container,.mejs__container video::-webkit-media-controls-start-playback-button {
     -webkit-appearance: none;
     display: none!important
@@ -938,7 +944,7 @@ button.swiper-pagination-bullet {
     z-index: 1000
 }
 
-.mejs__background,.mejs__mediaelement,.mejs__poster {
+.mejs__background,.mejs__mediaelement {
     left: 0;
     position: absolute;
     top: 0
@@ -952,13 +958,10 @@ button.swiper-pagination-bullet {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1
-}
-
-.mejs__controls,.mejs__overlay {
-    display: flex;
+    left: 0;
     position: absolute;
-    left: 0
+    top: 0;
+    z-index: 1
 }
 
 .mejs__poster-img {
@@ -968,7 +971,10 @@ button.swiper-pagination-bullet {
 
 .mejs__overlay {
     align-items: center;
+    display: flex;
     justify-content: center;
+    left: 0;
+    position: absolute;
     top: 0
 }
 
@@ -1027,9 +1033,12 @@ button.swiper-pagination-bullet {
 
 .mejs__controls {
     bottom: 0;
+    display: flex;
     height: 2.5rem;
+    left: 0;
     list-style-type: none;
     margin: 0;
+    position: absolute;
     width: 100%;
     z-index: 3
 }
@@ -1043,7 +1052,6 @@ button.swiper-pagination-bullet {
 }
 
 .mejs__button>button {
-    background-color: rgba(0,0,0,0);
     border: 0;
     color: #fff;
     cursor: pointer;
@@ -1811,10 +1819,6 @@ button.swiper-pagination-bullet {
     border-color: #276bda
 }
 
-.datepicker-input.in-edit:active,.datepicker-input.in-edit:focus {
-    box-shadow: 0 0 .25em .25em rgba(39,107,218,.2)
-}
-
 * {
     margin: 0;
     border: 0
@@ -2286,6 +2290,10 @@ p {
 
 .header,.select-wrapper,.select-wrapper select {
     background: var(--white)
+}
+
+.datepicker-input.in-edit:active,.datepicker-input.in-edit:focus {
+    box-shadow: none
 }
 
 .textarea {
