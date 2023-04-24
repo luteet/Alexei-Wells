@@ -1,0 +1,89 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		@@include("html/_info-hero.html")
+		<section class="photographer container">
+			<div class="photographer__content info-header section-header-content _column">
+				<h1 class="section-header-content__title title">
+					Questions & Answers
+				</h1>
+				<span class="section-header-content__accent-span accent-span">Creating natural, timeless photos of your special day.</span>
+			</div>
+			<div class="photographer__wrapper">
+				<div class="photographer__block">
+					<div class="photographer__image">
+						<div class="photographer__image--body image-body">
+							<picture>
+								<source srcset="img/info/photographer/photographer-image-1.webp" type="image/webp">
+								<img src="img/info/photographer/photographer-image-1.jpg" alt="" width="695" height="830" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="photographer__info">
+						<h2>
+							Who is the photographer? 
+						</h2>
+						<p>Alex Yankott — is a founder and an award-winning lead photographer at Yankott, known for stylish, modern and contemporary photographs that he creates for clients.</p>
+						<p>He mainly specialises in commercial, branding and advertising photography services for professional and influential individuals, small to large-sized businesses, new and established brands. His works have participated in major world photography festivals and exhibitions.</p>
+						<p>As for a photographer, his goal is to create photographs that tell a story, attract attention and drive measurable results.</p>
+					</div>
+				</div>
+				<div class="photographer__block">
+					<div class="photographer__image">
+						<div class="photographer__image--body image-body">
+							<picture>
+								<source srcset="img/info/photographer/photographer-image-2.webp" type="image/webp">
+								<img src="img/info/photographer/photographer-image-2.jpg" alt="" width="695" height="830" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="photographer__info">
+						<h2>
+							Why did he start as a photographer?
+						</h2>
+						<p>Like many things in this world, everything starts with passion.</p>
+						<p>Since childhood, he has tried to find a purpose in life. Something that drives him and brings value to others. He knew that he was naturally good with people and have an unhealthy attraction to different areas of visual communication. From paintings, billboard ads and illustrations to sculptures, tattoos and graphic design. He wanted to understand it all. He was drowning in the sea of information, unrealistic goals and fake expectations.</p>
+						<p>He spent his early years doing marketing and digital consultancy when at some point he realised that he is not enjoying it. It was a turning point. At the age of 24, he decided to quit and moved to London with the idea of becoming a professional photographer.</p>
+						<p>Now he is meeting with people and visiting places he couldn’t dream of. Every person – is a new unique story to capture. Every client – is a new creative challenge. The world is a playground.</p>
+						<p>As he said: “I am fortunate to do something that I enjoy. For me it’s a privilege that I can call myself a photographer”.</p>
+					</div>
+				</div>
+			</div>
+			<div class="photographer__services">
+				<h2 class="photographer__services--title">
+					The work values that drive everything we do
+				</h2>
+				<ul class="photographer__services--list">
+					@@loop("html/_photographer-service.html", [
+						{
+							"title": "Passion",
+							"text": "Being a photographer – is a lifestyle. We can’t imagine ourselves being someone else.",
+						},
+						{
+							"title": "Value",
+							"text": "Our goal is to create photographs that tell a story, attract attention and drive measurable results.",
+						},
+						{
+							"title": "Mind of business",
+							"text": "Every business is different. That’s why our approach is never the same.",
+						},
+						{
+							"title": "Professional attitude",
+							"text": "Customer service, quality, integrity and transparency play a key role in what we do.",
+						},
+						{
+							"title": "Creativity",
+							"text": "Original ideas for day-to-day and uncommon tasks.",
+						},
+						{
+							"title": "Communication",
+							"text": "We will do our best to make clients feel comfortable while working with us.",
+						},
+					])
+				</ul>
+			</div>
+		</section>
+		@@include("html/_section-text-nav.html")
+	</main>
+
+@@include("html/_footer.html")

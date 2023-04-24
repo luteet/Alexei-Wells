@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+		<header class="header container _alt">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="158" height="29" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Homepage
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="stories.html">
+								Stories
+							</a>
+						</li>
+						<li>
+							<a href="process.html">
+								Info
+							</a>
+						</li>
+						<li>
+							<a href="pricing.html">
+								Pricing
+							</a>
+							<ul>
+								<li>
+									<a href="weddings-pricing.html">
+										Weddings
+									</a>
+								</li>
+								<li>
+									<a href="engagement-pricing.html">
+										Engagements
+									</a>
+								</li>
+								<li>
+									<a href="albums-pricing.html">
+										Albums
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="get-in-touch.html">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				Menu
+			</button>
+		</header>
+		<script>
+			document.querySelector('html').style.setProperty("--height-screen-min", window.innerHeight - document.querySelector('.header').offsetHeight + "px");
+		</script>

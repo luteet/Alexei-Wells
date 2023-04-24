@@ -1,0 +1,198 @@
+.photographer {
+
+	// .photographer__content
+
+	&__content {
+	}
+
+	// .photographer__wrapper
+
+	&__wrapper {
+	}
+
+	// .photographer__block
+
+	&__block {
+
+		&:not(:first-child) {
+			@include _992 {
+				padding-top: 120px;
+			}
+
+			padding-top: 50px;
+		}
+
+		display: grid;
+		gap: 30px;
+		@include _992 {
+			grid-template-columns: 1fr 1fr;
+			gap: 115px;
+		}
+	}
+
+	@include _992 {
+		&__block:nth-child(even) &__image {
+			grid-column: 2; grid-row: 1;
+		}
+	
+		&__block:nth-child(even) &__info {
+			grid-column: 1; grid-row: 1;
+		}
+	}
+
+	// .photographer__image
+
+	&__image {
+
+		// .photographer__image--body
+
+		&--body {
+			
+		}
+	}
+
+	// .photographer__info
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		& h2 {
+			font-size: 1.5rem;
+			line-height: 150%;
+
+			@include _550 {
+				font-size: 1.75rem;
+			}
+			
+			@include _768 {
+				font-size: 2rem;
+				line-height: 165%;
+			}
+			
+			@include _992 {
+				font-size: 2.5rem;
+			}
+		}
+
+		& p {
+			font-weight: 300;
+			font-size: 1rem;
+			line-height: 200%;
+			@include _992 {
+				font-size: 1.125rem;
+			}
+		}
+	}
+
+	// .photographer__services
+
+	&__services {
+
+		padding-top: 80px;
+		
+		@include _768 {
+			padding-top: 100px;
+		}
+		
+		@include _992 {
+			padding-top: 150px;
+		}
+
+		// .photographer__services--list
+
+		&--list {
+			counter-reset: photographer_service_number;
+
+			display: grid;
+			gap: 30px;
+			@include _550 {
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+			}
+
+			padding-top: 30px;
+
+			@include _992 {
+				gap: 70px 63px;
+				padding-top: 102px;
+			}
+			
+		}
+
+		// .photographer__services--title
+
+		&--title {
+			max-width: 800px;
+			font-family: var(--title-font);
+			font-size: 2.25rem;
+			line-height: 108%;
+
+			@include _550 {
+				font-size: 2.5rem;
+			}
+			
+			@include _768 {
+				font-size: 3rem;
+			}
+			
+			@include _992 {
+				font-size: 3.75rem;
+				line-height: 120%;
+				font-family: var(--main-font);
+			}
+		}
+
+		// .photographer__services--item
+
+		&--item {
+		}
+
+		&--item:nth-child(-n + 9) &--number::before {
+			content: "0"counter(photographer_service_number)".";
+		}
+
+		// .photographer__services--number
+
+		&--number {
+			&::before {
+				counter-increment: photographer_service_number;
+				content: counter(photographer_service_number)".";
+			}
+		}
+
+		// .photographer__services--item-title
+
+		&--item-title {
+			font-size: 1.5rem;
+			line-height: 180%;
+			padding-top: 20px;
+
+			@include _550 {
+				font-size: 1.75rem;
+			}
+			
+			@include _768 {
+				font-size: 2rem;
+				line-height: 130%;
+			}
+			
+			@include _992 {
+				font-size: 2.5rem;
+				padding-top: 30px;
+			}
+		}
+
+		// .photographer__services--item-text
+
+		&--item-text {
+			font-size: 1rem;
+			font-weight: 300;
+			line-height: 200%;
+
+			@include _992 {
+				font-size: 1.125rem;
+			}
+		}
+	}
+}

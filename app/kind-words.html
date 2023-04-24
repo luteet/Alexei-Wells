@@ -1,0 +1,72 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		@@include("html/_info-hero.html")
+		<section class="kind-words container">
+			<div class="kind-words__content info-header section-header-content _column">
+				<h1 class="section-header-content__title title">
+					Kind Words
+				</h1>
+				<span class="section-header-content__accent-span accent-span">Creating natural, timeless photos of your special day.</span>
+			</div>
+			<ul class="kind-words__list">
+				@@loop("html/_kind-words-item.html", [
+					{
+						"image": "1",
+						"couple": "Hannah + Nick",
+						"place": "Fabrica Wedding, Brighton",
+						"text": "Finally, the blubbing has stopped and I’ve managed to summon up some words that express the inexpressible! “HOLY SH!T.” From the bottom of our collective heart, thank you. They are beautifully observed and captured. They left both of us jaw on the floor and not a dry eye in the house. Honestly, we can’t thank you enough.",
+					},
+					{
+						"image": "2",
+						"couple": "Lucia + Kilian",
+						"place": "Town Hall Hotel Wedding",
+						"text": "Kristiaaaaaaaaaaaan! Still don’t know what to say. How amazing to be able to see the wedding like this, weird how you really only see one thin slice through the day as the bride and groom…but you’ve captured all the memories I have in the most beautiful way. Everyone else loves them too. My family WhatsApp is on fire today!!!!!",
+					},
+					{
+						"image": "3",
+						"couple": "John + Rachel",
+						"place": "Royal Hospital Chelsea, London",
+						"text": "Oh WOW. YOU ARE INCREDIBLE. How how HOW have you SO MANY amazing shots - literally 508 of them. We. Love. THEM. Seriously amazed and overjoyed. We are so grateful. AND I was fighting myself to not put too high expectations on you - they were still up there despite myself and just WOW.",
+					},
+					{
+						"image": "4",
+						"couple": "Ellie + Phil",
+						"place": "Hotel Endsleigh Wedding",
+						"text": "Kristian we are truly blown away by your photos. We never dreamed it would be possible to capture the day with such sensitivity, tenderness, poetry and precision. They are thoroughly magical. For once I am actually lost for words. A thousand thank yous - we feel very lucky to have shared the day with you.",
+					},
+					{
+						"image": "5",
+						"couple": "Florence + Callum",
+						"place": "Aswarby Rectory Wedding",
+						"text": "We’re still in slight shock at how amazing these are! We’ve been through them every day, reliving each moment you’ve captured. You’ve managed to capture all of the joy and happiness we experienced during the day and some amazing interactions with some of our favourite people. ",
+					},
+					{
+						"image": "6",
+						"couple": "Bronwyn + George",
+						"place": "Sopley Mill Wedding",
+						"text": "Just…wow. Dude, can not tell you how much we love these!! Can’t stop scrolling through them all the way through today, and each time I do I have a new favourite, haha. You’ve captured everyone we had there so well, and going through them just feels like living the day all over again. The bouncy castle pics especially are hilarious.",
+					},
+					{
+						"image": "7",
+						"couple": "Kavita + James",
+						"place": "Belvoir Castle Wedding",
+						"text": "Where do we begin!? Kristian you are INCREDIBLE! Every single one of these photos captured every single moment of the day. We have looked at the photos over and over again, and it gets us EVERY time! We couldn’t possibly pick a favourite. From start (7am!) to finish you’ve helped create the most perfect memories! We can’t thank you enough!",
+					},
+					{
+						"image": "8",
+						"couple": "Gemma + Mike",
+						"place": "Warehouse Wedding",
+						"text": "Kristian…... Not quite sure how we can thank you enough…. Where to start! Suffice to say we have watched the highlights show several times (with tears) and have already been through the photos a few times as well! These are simply so beautiful, so fun and tell such a story of our day, that they will last a lifetime.",
+					},
+				])
+			</ul>
+			<div class="kind-words__footer">
+				@@include("html/_page-nav.html", {
+					"class": 'kind-words__nav'
+				})
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

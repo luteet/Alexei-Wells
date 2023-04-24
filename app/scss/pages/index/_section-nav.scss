@@ -1,0 +1,116 @@
+.section-nav {
+
+	// .section-nav__list
+
+	&__list {
+
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 40px;
+
+		margin: 0 calc(0px - var(--container-padding));
+
+		@include _768 {
+			grid-template-columns: 1fr 1fr;
+			margin: 0;
+			gap: 30px;
+		}
+
+		
+
+		@media (min-width: 1440px) {
+			gap: 68px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		// .section-nav__list--item
+
+		&--item {
+
+		}
+	}
+
+	// .section-nav__card
+
+	&__card {
+
+		display: block;
+		text-align: center;
+		position: relative;
+		width: 100%; padding-top: 520px;
+		@include _550 {
+			padding-top: 720px;
+		}
+
+		@include _768 {
+			padding-top: 141.478439%;
+			
+		}
+		
+
+		color: var(--text-color);
+
+		// .section-nav__card--image
+
+		&--image {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			padding-top: 0 !important;
+
+			clip-path: polygon(5% 0%, 95% 0%, 95% 70%, 5% 70%);
+
+			@include _550 {
+				clip-path: polygon(5% 0%, 95% 0%, 95% 75%, 5% 75%);
+			}
+
+			@include _768 {
+				clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+			}
+
+			@media (min-width: 850px) {
+				clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
+			}
+
+			@include _992 {
+				clip-path: polygon(5% 0%, 95% 0%, 95% 70%, 5% 70%);
+			}
+
+			transition: clip-path .3s ease;
+		}
+
+		&:hover &--image {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
+		&:hover {
+			color: var(--white);
+		}
+
+		// .section-nav__card--content
+
+		&--content {
+			position: absolute;
+			left: 0; bottom: 0;
+			width: 100%;
+			z-index: 2;
+
+			padding: 56px var(--container-padding);
+		}
+
+		// .section-nav__card--span
+
+		&--span {
+			text-transform: uppercase;
+			transition: color .3s ease;
+
+			font-size: 1.25rem;
+		}
+
+		// .section-nav__card--title
+
+		&--title {
+			padding-top: 16px;
+			transition: color .2s ease;
+		}
+	}
+}

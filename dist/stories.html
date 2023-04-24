@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container _alt">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="158" height="29" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Homepage
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="stories.html">
+								Stories
+							</a>
+						</li>
+						<li>
+							<a href="process.html">
+								Info
+							</a>
+						</li>
+						<li>
+							<a href="pricing.html">
+								Pricing
+							</a>
+							<ul>
+								<li>
+									<a href="weddings-pricing.html">
+										Weddings
+									</a>
+								</li>
+								<li>
+									<a href="engagement-pricing.html">
+										Engagements
+									</a>
+								</li>
+								<li>
+									<a href="albums-pricing.html">
+										Albums
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="get-in-touch.html">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				Menu
+			</button>
+		</header>
+		<script>
+			document.querySelector('html').style.setProperty("--height-screen-min", window.innerHeight - document.querySelector('.header').offsetHeight + "px");
+		</script>
+
+		<main class="main">
+			<section class="hero container">
+				<div class="hero__image">
+					<div class="hero__image--body image-body">
+						<picture>
+							<source srcset="img/stories/hero/stories-hero-image-1.webp" type="image/webp">
+							<img src="img/stories/hero/stories-hero-image-1.jpg" alt="" width="420" height="260" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<h1 class="hero__title title">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				</h1>
+				<div class="hero__text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+				</div>
+				<div class="hero__image">
+					<div class="hero__image--body image-body">
+						<picture>
+							<source srcset="img/stories/hero/stories-hero-image-2.webp" type="image/webp">
+							<img src="img/stories/hero/stories-hero-image-2.jpg" alt="" width="420" height="260" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<button class="hero__explore btn-to-scroll _to-down">
+					Explore
+					<svg width="8" height="20" viewBox="0 0 8 20">
+						<use xlink:href="img/sprites.svg#arrow-to-down"></use>
+					</svg>
+				</button>
+			</section>
+			<section class="stories container">
+				<div class="stories__content section-header-content _column">
+					<h2 class="section-header-content__title title">
+						Feautered Weddings
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Creating natural, timeless photos of your special day.</span>
+				</div>
+				<ul class="stories__list">
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Lade & John">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-1.webp" type="image/webp">
+									<img src="img/stories/stories-image-1.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">VILLA CIMBRONE, RAVELLO</span>
+							<h3 class="stories__card--title title _min">
+								Lade & John
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Alexandra & Edward">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-2.webp" type="image/webp">
+									<img src="img/stories/stories-image-2.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">BILTMORE CORAL GABLES, MIAMI</span>
+							<h3 class="stories__card--title title _min">
+								Alexandra & Edward
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Krishna & Sagar">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-3.webp" type="image/webp">
+									<img src="img/stories/stories-image-3.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">PUERTO VALLARTA, MEXICO</span>
+							<h3 class="stories__card--title title _min">
+								Krishna & Sagar
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Cindy & Moses">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-4.webp" type="image/webp">
+									<img src="img/stories/stories-image-4.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">METROPOLITAN CLUB, MANHATTAN</span>
+							<h3 class="stories__card--title title _min">
+								Cindy & Moses
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Ashley & Noah">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-5.webp" type="image/webp">
+									<img src="img/stories/stories-image-5.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">GUSTAVINOS, MANHATTAN</span>
+							<h3 class="stories__card--title title _min">
+								Ashley & Noah
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Jessica & Hiren">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-6.webp" type="image/webp">
+									<img src="img/stories/stories-image-6.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">PASEA HOTEL, LOS ANGELES</span>
+							<h3 class="stories__card--title title _min">
+								Jessica & Hiren
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Raven & Franklin">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-7.webp" type="image/webp">
+									<img src="img/stories/stories-image-7.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">PARK CHATEAU, NEW JERSEY</span>
+							<h3 class="stories__card--title title _min">
+								Raven & Franklin
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Vincent & Elsa">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-8.webp" type="image/webp">
+									<img src="img/stories/stories-image-8.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">OHEKA CASTLE, NEW YORK</span>
+							<h3 class="stories__card--title title _min">
+								Vincent & Elsa
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Alexia & Nick">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-9.webp" type="image/webp">
+									<img src="img/stories/stories-image-9.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">CASTLE HOTEL & SPA</span>
+							<h3 class="stories__card--title title _min">
+								Alexia & Nick
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Akhila & Vivek">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-10.webp" type="image/webp">
+									<img src="img/stories/stories-image-10.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">TROUTBECK, NEW JERSEY</span>
+							<h3 class="stories__card--title title _min">
+								Akhila & Vivek
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Jasmin & Aakash">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-11.webp" type="image/webp">
+									<img src="img/stories/stories-image-11.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">LEGACY CASTLE, NEW YORK</span>
+							<h3 class="stories__card--title title _min">
+								Jasmin & Aakash
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Sandra & George">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-12.webp" type="image/webp">
+									<img src="img/stories/stories-image-12.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">CASTLE, LONDON</span>
+							<h3 class="stories__card--title title _min">
+								Sandra & George
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Sabina & Artur">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-13.webp" type="image/webp">
+									<img src="img/stories/stories-image-13.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">HOTEL DE PARIS, ODESA</span>
+							<h3 class="stories__card--title title _min">
+								Sabina & Artur
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Jessica & Lamar">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-14.webp" type="image/webp">
+									<img src="img/stories/stories-image-14.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">PEREZ ART MUSEUM, MIAMI</span>
+							<h3 class="stories__card--title title _min">
+								Jessica & Lamar
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Bhumika & Kevan">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-15.webp" type="image/webp">
+									<img src="img/stories/stories-image-15.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">HILTON, NEW JERSEY</span>
+							<h3 class="stories__card--title title _min">
+								Bhumika & Kevan
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Tinnil & Jordan">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-16.webp" type="image/webp">
+									<img src="img/stories/stories-image-16.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">PARK CHATEAU, NEW JERSEY</span>
+							<h3 class="stories__card--title title _min">
+								Tinnil & Jordan
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Danny & Natasha">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-17.webp" type="image/webp">
+									<img src="img/stories/stories-image-17.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">VILLA CORA, FLORENCE</span>
+							<h3 class="stories__card--title title _min">
+								Danny & Natasha
+							</h3>
+						</a>
+					</li>
+					<li class="stories__item">
+						<a href="story-page.html" class="stories__card" aria-label="Jessica & Neil">
+							<div class="stories__card--image image-body">
+								<picture>
+									<source srcset="img/stories/stories-image-18.webp" type="image/webp">
+									<img src="img/stories/stories-image-18.jpg" alt="" width="487" height="340" loading="lazy">
+								</picture>
+							</div>
+							<span class="stories__card--place accent-span">CASINA VALADIER, ROME</span>
+							<h3 class="stories__card--title title _min">
+								Jessica & Neil
+							</h3>
+						</a>
+					</li>
+				</ul>
+				<nav class="stories__nav page-nav">
+					<a href="#" class="page-nav__arrow _prev">
+						<svg width="65" height="16" viewBox="0 0 65 16">
+							<use xlink:href="img/sprites.svg#arrow-prev">
+							</use>
+						</svg>
+						Prev posts
+					</a>
+					<div class="page-nav__list">
+						<a href="#">
+							1
+						</a>
+						<a href="#">
+							2
+						</a>
+						<a href="#">
+							3
+						</a>
+						<a href="#">
+							4
+						</a>
+						<a href="#">
+							...
+						</a>
+						<a href="#">
+							52
+						</a>
+					</div>
+					<a href="#" class="page-nav__arrow _next">
+						Next posts
+						<svg width="65" height="16" viewBox="0 0 65 16">
+							<use xlink:href="img/sprites.svg#arrow-next">
+							</use>
+						</svg>
+					</a>
+				</nav>
+			</section>
+		</main>
+
+		<footer class="footer container _min">
+			<button type="button" class="footer__to-top btn-to-scroll" aria-label="TO THE TOP OF THE PAGE">
+				<span>TO THE TOP OF THE PAGE</span>
+			</button>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Facebook">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Instagram">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Pinterest">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__gallery">
+				<ul>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-1.webp" type="image/webp">
+								<img src="img/footer/grid-image-1.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-2.webp" type="image/webp">
+								<img src="img/footer/grid-image-2.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-3.webp" type="image/webp">
+								<img src="img/footer/grid-image-3.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-4.webp" type="image/webp">
+								<img src="img/footer/grid-image-4.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__text">
+				Use this space to talk about your business. Don't forget to use keywords to describe your business to help with your search engine optimization.
+			</div>
+			<div class="footer__contact">
+				<h3 class="footer__contact--title">
+					Contact
+				</h3>
+				<ul>
+					<li>
+						<a href="#" class="btn _light _min">
+							Get in touch
+						</a>
+					</li>
+					<li>
+						<a href="mailto:info@photographer.com">
+							info@photographer.com
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380446988888">
+							+38 044 698 88 88
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav--image">
+					<div class="footer__nav--image-body image-body">
+						<picture>
+							<source srcset="img/footer/nav-image.webp" type="image/webp">
+							<img src="img/footer/nav-image.jpg" alt="" width="190" height="190" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<ul class="footer__nav--list">
+					<li>
+						<a href="#">
+							Homepage
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Stories
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Info
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Pricing
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__copy">
+				COPYRIGHT © 2023 ALEXEI WELLS. <br> ALL RIGHTS RESERVED.
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

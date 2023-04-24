@@ -1,0 +1,43 @@
+.portfolio {
+
+	padding-top: 70px;
+
+	// .portfolio__grid
+
+	&__grid {
+
+		margin: 0 -10px -20px -10px; width: calc(100% + 20px);
+		/* display: -webkit-box;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-webkit-line-clamp: 7;
+		-webkit-box-orient: vertical;
+		line-clamp: 7;
+		box-orient: vertical; */
+		
+		display: flex;
+		flex-wrap: wrap;
+
+		// .portfolio__grid--item
+
+		&--item {
+			width: 100%;
+			@include _550 {
+				width: 50%;
+			}
+			
+			padding: 0 10px 20px 10px;
+			
+			@include _992 {
+				width: 33.333%;
+				
+				//margin: 10px 0;
+			}
+		}
+
+		// .portfolio__grid--image
+
+		&--image {
+		}
+	}
+}

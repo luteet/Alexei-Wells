@@ -1,0 +1,102 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		@@include("html/_hero.html", {
+			"image_1": "img/portfolio/hero/portfolio-hero-image-1",
+			"image_2": "img/portfolio/hero/portfolio-hero-image-2",
+		})
+		<section class="portfolio container" id="portfolio">
+			<h2 class="visually-hidden">Portfolio</h2>
+			<ul class="portfolio__grid grid">
+				@@loop("html/_portfolio-item.html", [
+					{
+						"image": '1',
+						"width": '610', "height": '404',
+					},
+					{
+						"image": '2',
+						"width": '611', "height": '834',
+					},
+					{
+						"image": '3',
+						"width": '610', "height": '404',
+					},
+					{
+						"image": '4',
+						"width": '610', "height": '403',
+					},
+					{
+						"image": '5',
+						"width": '610', "height": '404',
+					},
+					{
+						"image": '6',
+						"width": '610', "height": '404',
+					},
+					{
+						"image": '7',
+						"width": '610', "height": '824',
+					},
+					{
+						"image": '8',
+						"width": '610', "height": '404',
+					},
+					{
+						"image": '9',
+						"width": '610', "height": '826',
+					},
+					{
+						"image": '11',
+						"width": '610', "height": '825',
+					},
+					{
+						"image": '10',
+						"width": '610', "height": '835',
+					},
+					{
+						"image": '12',
+						"width": '610', "height": '404',
+					},
+					{
+						"image": '13',
+						"width": '610', "height": '405',
+					},
+					{
+						"image": '14',
+						"width": '610', "height": '405',
+					},
+					{
+						"image": '15',
+						"width": '610', "height": '821',
+					},
+					{
+						"image": '16',
+						"width": '610', "height": '405',
+					},
+					{
+						"image": '17',
+						"width": '610', "height": '824',
+					},
+					{
+						"image": '19',
+						"width": '610', "height": '821',
+					},
+					{
+						"image": '18',
+						"width": '610', "height": '836',
+					},
+					{
+						"image": '20',
+						"width": '610', "height": '404',
+					},
+					{
+						"image": '21',
+						"width": '610', "height": '404',
+					},
+				])
+			</ul>
+		</section>
+		@@include("html/_section-text-nav.html")
+	</main>
+
+@@include("html/_footer.html")

@@ -1,0 +1,151 @@
+.index-hero {
+
+	/* display: flex;
+	flex-direction: column; */
+
+	// .index-hero__bg-slider
+
+	&__bg-slider {
+
+		
+
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			opacity: 0.6;
+			@include _992 {
+				opacity: 0.4;
+			}
+			background: var(--text-color);
+			z-index: 2;
+			pointer-events: none;
+		}
+
+		background: var(--text-color);
+		// .index-hero__bg-slider--wrapper
+
+		&--wrapper {
+		}
+
+		// .index-hero__bg-slider--slide
+
+		&--slide {
+			position: relative;
+			width: 100%; height: auto;
+			overflow: hidden;
+
+			& img {
+				position: absolute;
+				left: 50%; top: 0;
+				width: auto; height: 100%;
+				transform: translate(-50%,0);
+				object-fit: cover;
+				background: #D3D3D3;
+
+				//opacity: 0;
+				
+			}
+		}
+	}
+
+	// .index-hero__slider
+
+	&__slider {
+
+		//min-height: calc(var(--height-screen-min) - var(--height-header));
+		min-height: var(--height-screen-min);
+
+		/* flex: 1 1 auto;
+		min-height: 100%; */
+		display: flex;
+		align-items: flex-end;
+
+		@include _992 {
+			align-items: center;
+		}
+
+		// .index-hero__slider--wrapper
+
+		&--wrapper {
+			align-items: flex-end;
+			@include _992 {
+				align-items: stretch;
+			}
+		}
+
+		// .index-hero__slider--slide
+
+		&--slide {
+			padding: 50px 0 78px 0;
+			@include _992 {
+				padding: 150px 0;
+			}
+
+			color: var(--white);
+			
+		}
+
+		// .index-hero__slider--nav
+
+		&--nav {
+		}
+	}
+
+	// .index-hero__slide
+
+	&__slide {
+
+		// .index-hero__slide--title
+
+		&--title {
+			max-width: 615px;
+		}
+
+		// .index-hero__slide--text
+
+		&--text {
+			max-width: 615px;
+
+			padding-top: 17px;
+
+			font-size: 1.125rem;
+			@include _992 {
+				font-size: 1.25rem;
+			}
+			line-height: 180%;
+		}
+	}
+
+	// .index-hero__nav
+
+	&__nav {
+
+		position: absolute;
+		left: 0; bottom: 10px;
+		
+		@include _992 {
+			bottom: 80px;
+		}
+
+		display: flex;
+		margin: 0 -12px;
+
+		// .index-hero__nav--btn
+
+		&--btn {
+			position: static;
+			margin: 0 12px;
+			width: 80px;
+			background: transparent;
+			fill: var(--white);
+			&::after {
+				display: none;
+			}
+		}
+	}
+}

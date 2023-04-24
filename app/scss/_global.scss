@@ -1,0 +1,430 @@
+@use 'sass:math';
+
+html, body {
+	font-size: 16px;
+	min-height: 100%;
+	min-width: 320px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+body {
+	font-family: var(--main-font);
+	
+	font-weight: 400;
+	line-height: 150%;
+	color: var(--text-color);
+
+	display: flex;
+	flex-direction: column;
+
+	//padding-right: var(--popup-padding);
+
+	&._mob-menu-active {
+		overflow: hidden;
+	}
+
+	&._popup-active {
+		overflow: hidden;
+	}
+	
+}
+
+section {
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper {
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	overflow: hidden;
+
+	flex: 1 0 auto;
+	position: relative;
+
+	padding-bottom: 100px;
+	
+	@include _992 {
+		padding-bottom: 170px;
+	}
+}
+
+.container {
+	
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	
+	@media (min-width: #{$containerMin}px) {
+
+		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+
+		&._min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+		}
+
+		&._alt {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($container2, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($container2, 2)}px));
+		}
+
+		&._large {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
+		}
+	}
+}
+
+.image-body {
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		background: var(--text-color);
+		opacity: .1;
+		pointer-events: none;
+	}
+	& img {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		object-fit: cover;
+		background: #D3D3D3;
+	}
+}
+
+.section-padding {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	@include _768 {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	@include _992 {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	
+	padding: 17px 45px;
+	&._min {
+		font-size: 0.875rem;
+		padding: 12px 25px;
+	}
+
+	background: var(--accent);
+	&._light {
+		background: var(--white);
+		color: var(--text-color);
+
+		&:hover {
+			background: #ececec;
+		}
+		
+		&:active {
+			background: #dadada;
+		}
+	}
+
+	color: var(--white);
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	line-height: 133.333333%;
+	font-weight: 700;
+	text-align: center;
+
+	transition: background .3s ease;
+
+	&:hover {
+		background: var(--accent-hover);
+	}
+	
+	&:active {
+		background: var(--accent-active);
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px; height: 1px;
+	margin: -1px; padding: 0;
+	border: 0;
+	
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.more-content {
+
+	&-wrapper {
+		
+		& p:nth-child(n + 3) {
+			display: none;
+			@include _992 {
+				display: block;
+			}	
+		}
+	}
+
+	&._visible &-wrapper p:nth-child(n + 3) {
+		display: block;
+	}
+
+	&._visible .more-btn {
+		display: none;
+	}
+}
+
+.more-btn {
+	@include _992 {
+		display: none;
+	}
+}
+
+.section-header-content {
+
+	&._center {
+		text-align: center;
+	}
+
+	@include _992 {
+		display: grid;
+		grid-template-columns: 45.724% auto;
+		gap: 0 30px;
+
+		&._column {
+			grid-template-columns: 100%;
+		}
+
+		&._center {
+			display: block;
+		}
+	}
+
+	@media (min-width: 1300px) {
+		gap: 0 100px;
+	}
+
+	// .section-header-content__title
+
+	&__title {
+	}
+
+	// .section-header-content__accent-span
+
+	&__accent-span {
+		display: block;
+		padding-top: 15px;
+		@include _992 {
+			padding-top: 0;
+		}
+	}
+
+	&._column &__text {
+		@include _992 {
+			grid-column: auto; grid-row: auto;
+			padding-top: 16px;
+		}
+	}
+
+	// .section-header-content__text
+
+	&__text {
+		padding-top: 20px;
+		@include _992 {
+			grid-column: 2; grid-row: 1/4;
+			padding-top: 0;
+			font-size: 1.125rem;
+		}
+
+		& p {
+			padding-top: 0;
+		}
+
+		font-weight: 300;
+		font-size: 1rem;
+		line-height: 200%;
+	}
+}
+
+.section-padding-top {
+	padding-top: 80px;
+	
+	@include _768 {
+		padding-top: 116px;
+	}
+
+	@include _992 {
+		padding-top: 186px;
+	}
+}
+
+.section-padding-top-large {
+	padding-top: 80px;
+	
+	@include _768 {
+		padding-top: 116px;
+	}
+
+	@include _992 {
+		padding-top: 200px;
+	}
+}
+
+.hide-on-mob {
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.visible-on-mob {
+	@include _768 {
+		display: none;
+	}
+}
+
+.page-nav {
+
+	padding-top: 75px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	// .page-nav__arrow
+
+	&__arrow {
+		display: flex;
+		align-items: center;
+		color: var(--dark);
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 0.875rem;
+		@media (min-width: 370px) {
+			font-size: 1.125rem;
+		}
+		@include _768 {
+			font-size: 1.25rem;
+		}
+		
+		@include _992 {
+			font-size: 1.625rem;
+		}
+		line-height: 115.384615%;
+
+		&._disabled {
+			pointer-events: none;
+			opacity: .7;
+		}
+		transition: opacity .3s ease;
+		&:hover {
+			opacity: 0.7;
+		}
+		
+		&:active {
+			opacity: 0.5;
+		}
+
+		position: relative;
+
+		&._prev {
+			order: 2;
+			@include _992 {
+				order: 1;
+			}
+		}
+
+		&._prev svg {
+			margin-right: 12px;
+			@include _550 {
+				margin-right: 22px;
+			}
+		}
+
+		&._next {
+			order: 3;
+			@include _992 {
+				order: 3;
+			}
+		}
+		
+		&._next svg {
+			margin-left: 12px;
+			@include _550 {
+				margin-left: 22px;
+			}
+		}
+
+		& svg {
+			width: 40px;
+			@include _550 {
+				width: 65px;
+			}
+		}
+	}
+
+	// .page-nav__list
+
+	&__list {
+		flex: 1 1 100%;
+		order: 1;
+		padding-bottom: 10px;
+		@include _992 {
+			order: 2;
+			flex: 1 1 auto;
+			padding-bottom: 0;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: -5px -10px;
+
+		& > * {
+			display: block;
+			color: var(--dark);
+			font-size: 1.125rem;
+			line-height: 200%;
+			padding: 5px 10px;
+			pointer-events: none;
+			&:not(.current) {
+				pointer-events: auto;
+				transition: opacity .3s ease;
+				&:hover {
+					opacity: 0.7;
+				}
+				
+				&:active {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

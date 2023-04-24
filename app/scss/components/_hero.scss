@@ -1,0 +1,178 @@
+.hero {
+
+	
+	min-height: var(--height-screen-min);
+
+	display: grid;
+	grid-template-columns: 40% 40% 20%;
+	@include _550 {
+		grid-template-columns: 31% auto 31%;
+	}
+
+	@include _992 {
+		padding-top: 42px;
+	}
+	padding-left: 0; padding-right: 0;
+
+	& > * {
+		align-self: center;
+	}
+
+	// .hero__row
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin: 0 calc(0px - var(--container-padding));
+
+		@include _992 {
+			margin: 0;
+		}
+
+		/* &:nth-child(2) {
+			flex: 1 1 auto;
+			align-items: center;
+		} */
+	}
+
+	// .hero__col
+
+	&__col {
+		flex: 0 1 33.333%;
+
+		display: flex;
+		align-items: center;
+
+		&:nth-child(1) {
+			order: 1;
+
+			flex: 0 1 60%;
+			@include _992 {
+				flex: 0 1 33.333%;
+			}
+		}
+
+		&:nth-child(2) {
+			order: 3;
+			@include _992 {
+				order: 2;
+			}
+		}
+
+		&:nth-child(3) {
+			order: 2;
+			
+			@include _992 {
+				order: 1;
+			}
+		}
+	}
+
+	// .hero__image
+
+	&__image {
+
+		width: 100%;
+		&:nth-child(1) {
+			grid-column: 2 span;
+			//max-width: 85%;
+			@include _992 {
+				grid-column: 1;
+			}
+		}
+
+		&:nth-child(4) {
+			grid-column: 3;
+			min-height: 140px;
+
+			display: flex;
+		}
+
+		// .hero__image--body
+
+		&--body {
+			width: 100%; min-height: 100%;
+		}
+
+		&:nth-child(1) &--body {
+			padding-top: 61.9048%;
+		}
+	}
+
+	// .hero__title
+
+	&__title {
+		grid-column: 3 span;
+
+		text-align: center;
+		width: 100%;
+
+		padding: 30px var(--container-padding);
+		@include _992 {
+			padding: 86px 0 51px;
+		}
+	}
+
+	// .hero__text
+
+	&__text {
+		font-weight: 500;
+		font-size: 0.875rem;
+		
+		@include _768 {
+			font-size: 1rem;
+		}
+		
+		@include _992 {
+			font-size: 1.125rem;
+		}
+		line-height: 200%;
+
+		padding-left: var(--container-padding); padding-right: 30px;
+
+		grid-column: 2 span;
+
+		@include _992 {
+			padding-left: 0; padding-right: 0;
+			grid-column: 1;
+			max-width: 343px;
+		}
+	}
+
+	// .hero__explore
+
+	&__explore {
+		grid-column: 3 span;
+		@include _992 {
+			grid-column: 2; grid-row: 3;
+		}
+
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		background: transparent;
+
+		text-transform: uppercase;
+		font-size: 1.125rem;
+		line-height: 166.666667%;
+		color: var(--text-color);
+
+		& svg {
+			margin-top: 5px;
+			transition: transform .3s ease;
+		}
+
+		&:hover svg {
+			transform: translate3d(0,10px,0);
+		}
+		
+		&:active svg {
+			transform: translate3d(0,7px,0);
+		}
+	}
+}

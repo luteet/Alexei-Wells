@@ -1,0 +1,217 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		@@include("html/_hero.html", {
+			"image_1": "img/stories/hero/stories-hero-image-1",
+			"image_2": "img/stories/hero/stories-hero-image-2",
+		})
+		<section class="albums section-padding-top">
+			<div class="albums__content section-header-content container">
+				<h2 class="section-header-content__title title">
+					Albums With Love
+				</h2>
+				<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+				<div class="section-header-content__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+				</div>
+			</div>
+			<div class="albums__slider album-slider swiper">
+				<div class="album-slider__wrapper swiper-wrapper">
+					<div class="album-slider__slide swiper-slide">
+						<div class="album-slider__slide--image image-body">
+							<picture>
+								<source srcset="img/pricing/albums/albums-slide-1.webp" type="image/webp">
+								<img src="img/pricing/albums/albums-slide-1.jpg" alt="" width="1004" height="600" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="album-slider__slide swiper-slide">
+						<div class="album-slider__slide--image image-body">
+							<picture>
+								<source srcset="img/pricing/albums/albums-slide-2.webp" type="image/webp">
+								<img src="img/pricing/albums/albums-slide-2.jpg" alt="" width="1004" height="600" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="album-slider__slide swiper-slide">
+						<div class="album-slider__slide--image image-body">
+							<picture>
+								<source srcset="img/pricing/albums/albums-slide-3.webp" type="image/webp">
+								<img src="img/pricing/albums/albums-slide-3.jpg" alt="" width="1004" height="600" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="album-slider__nav">
+					<button class="album-slider__arrow swiper-button-prev" title="Prev slide">
+						<svg width="81" height="15" viewBox="0 0 81 15">
+							<use xlink:href="img/sprites.svg#slider-arrow-1-prev"></use>
+						</svg>
+					</button>
+					<button class="album-slider__arrow swiper-button-next" title="Next slide">
+						<svg width="81" height="15" viewBox="0 0 81 15">
+							<use xlink:href="img/sprites.svg#slider-arrow-1-next"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="wedding-photo-albums container section-padding-top">
+			<h2 class="wedding-photo-albums__title title">
+				Fine Art Wedding Photo Albums
+			</h2>
+			<span class="wedding-photo-albums__accent-span accent-span">Handmade in the UK using the finest ink & paper</span>
+			<div class="wedding-photo-albums__image">
+				<div class="wedding-photo-albums__image--body">
+					<picture>
+						<source srcset="img/pricing/fine-art/fine-art-image.webp" type="image/webp">
+						<img src="img/pricing/fine-art/fine-art-image.jpg" alt="" width="695" height="830" loading="lazy">
+					</picture>
+				</div>
+			</div>
+			<div class="wedding-photo-albums__text text">
+				<p>Tell your wedding story in the best possible way. You're investing in wedding photography because your photos mean a lot to you.</p>
+				<p>They're taken to be held, relived at random hours of the day, and passed around the coffee table when friends and family visit.</p>
+				<p>You're also busy, I get it (whether busy with life or busy lounging on the sofa watching netflix)! Which is why I will do all the designing and ordering for you. All you have to do is open the door when the postman arrives.</p>
+				<p>Watch the video below to find out more!</p>
+			</div>
+		</section>
+		<section class="features container section-padding-top">
+			<h2 class="features__title title">
+				Features
+			</h2>
+			<ul class="features__list">
+				<li>10x10" hand-bound album made with the finest quality cover materials, papers and inks</li>
+				<li>Images printed directly on to the page</li>
+				<li>Each double spread opens out flat with an almost invisible crease so your photographs can be displayed across two pages</li>
+				<li>Freedom to print across the crease for unrestricted layout designs</li>
+				<li>Archival ink printed on fine art paper to create the best prints I have ever seen & to last a lifetime (i.e. no fading ink/discolouration/yellowing</li>
+				<li>Incredible range of personalisation options including cover printing, foiling, and embossing</li>
+				<li>8x8" albums for your parents also available</li>
+			</ul>
+		</section>
+		<section class="few-steps container section-padding-top">
+			<div class="few-steps__content section-header-content">
+				<h2 class="section-header-content__title title">
+					Few Simple Steps
+				</h2>
+				<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+				<div class="section-header-content__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+				</div>
+			</div>
+			<ul class="few-steps__list">
+				@@loop("html/_few-steps-item.html", [
+					{
+						"image": "1",
+						"title": "Fill in the order form below",
+						"text": "Tell me the materials and personalisation options you would like!",
+					},
+					{
+						"image": "2",
+						"title": "Proof your album",
+						"text": "Sit back and relax whilst I design and arrange your album. After that, I'll send you an online proof where you can go through each page. You can easily make comments on each page if you'd like to switch out images/make adjustments.",
+					},
+					{
+						"image": "3",
+						"title": "Your album is sent off",
+						"text": "Once everything is perfect and I've got your seal of approval, your album will be sent to a little workshop in Yorkshire to be made. Production will take up to 21 days.",
+					},
+					{
+						"image": "4",
+						"title": "Open the door",
+						"text": "It will feel like Christmas day, the day your album arrives. Open the door and receive your album. Touch it, show it off, display it. It's your pride and joy.",
+					},
+				])
+			</ul>
+		</section>
+		<section class="section-pricing container section-padding-top">
+			<div class="section-pricing__content section-header-content">
+				<h2 class="section-header-content__title title">
+					Pricing
+				</h2>
+				<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+				<div class="section-header-content__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+				</div>
+			</div>
+			<ul class="section-pricing__list">
+				<li class="section-pricing__item">
+					<h3>
+						10x10" Album & Two Parent Albums
+					</h3>
+					<p>
+						Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean. 
+					</p>
+					<p>
+						<b>
+							$1050.00
+						</b>
+					</p>
+				</li>
+				<li class="section-pricing__item">
+					<h3>
+						10x10" Album
+					</h3>
+					<p>
+						Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean. 
+					</p>
+					<p>
+						<b>
+							$600.00
+						</b>
+					</p>
+				</li>
+				<li class="section-pricing__item">
+					<h3>
+						8x8" Parent Album
+					</h3>
+					<p>
+						Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean. 
+					</p>
+					<p>
+						<b>
+							$300.00
+						</b>
+					</p>
+				</li>
+			</ul>
+		</section>
+		<section class="faq container section-padding-top-large">
+			<div class="faq__content info-header _min section-header-content">
+				<h2 class="section-header-content__title title">
+					Questions & Answers
+				</h2>
+				<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+				<div class="section-header-content__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+				</div>
+			</div>
+			<ul class="faq__list">
+				@@loop("html/_faq-item.html", [
+					{
+						"question_tag": "h3",
+						"question": 'How long will my album take to arrive?',
+						"answear": "Once you have proofed and checked over your final album, it will be sent off to be made. As it is a custom product and handmade, it will take up to 21 working days to arrive.",
+					},
+					{
+						"question_tag": "h3",
+						"question": "Why are the albums so expensive?",
+						"answear": "You get what you pay for! Only the finest materials, inks and paper are used to create your album, and everything is responsibly sourced. Furthermore, your album is handmade (by real people!) to ensure that high quality. Once you've gotten your hands on your album, you'd wonder why you were even considering getting a £30 photobook from Tesco.",
+					},
+					{
+						"question_tag": "h3",
+						"question": 'Can I order my album after the wedding?',
+						"answear": 'We will cover all travelling and overnight costs. If you are getting married abroad please pop an email through to us as we have a dedicated destination wedding brochure.',
+					},
+					{
+						"question_tag": "h3",
+						"question": "How many spreads do I get in my album?",
+						"answear": "1 spread = 2 sides. <br> Your wedding album includes 20 spreads. Additional spreads can be added for £20 each.",
+					},
+				])
+			</ul>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

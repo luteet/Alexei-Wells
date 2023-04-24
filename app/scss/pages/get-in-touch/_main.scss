@@ -1,0 +1,172 @@
+@use 'sass:math';
+.get-in-touch {
+
+	@include _992 {
+		margin-top: 70px;
+	}
+
+	display: grid;
+	
+	// .get-in-touch__image
+
+	&__image {
+
+		margin: 0 calc(0px - var(--container-padding));
+		min-height: 300px;
+
+		@media(min-width: 1440px) {
+			margin: 0;
+			grid-area: 1/1;
+			width: 100%; padding-right: calc(50% + 950px);
+			
+			height: 100%;
+		}
+
+		// .get-in-touch__image--body
+
+		&--body {
+			min-height: 100%;
+			@media (min-width: 1440px) {
+				min-width: 615px;
+			}
+
+			& img {
+				@media(min-width: 1440px) {
+					object-position: 42%;
+				}
+			}
+		}
+	}
+
+	// .get-in-touch__form
+
+	&__form {
+
+		@media (min-width: #{$containerMin}px) {
+			padding-left: var(--container-padding);	
+		}
+
+		margin-top: 50px;
+
+		@media (min-width: 1440px) {
+			margin-top: 0;
+			grid-area: 1/1;
+			padding-left: max(var(--container-padding), calc(50% + 10px));
+		}
+
+		@media (min-width: 1500px) {
+			padding-left: max(800px, calc(50% - #{math.div($container, 2)}px));
+		}
+
+		//flex: 0 1 70%;
+		&--body {
+			//padding-left: 30%;
+		}
+		align-self: center;
+
+		//padding: 30px 0 0px 102px;
+
+		// .get-in-touch__form--wrapper
+
+		&--wrapper {
+			background: #F1F1F1;
+
+			padding: 50px 20px 72px 20px;
+			margin: 80px calc(0px - var(--container-padding)) 0;
+
+			@include _768 {
+				padding: 42px 70px 55px 70px;
+				margin: 76px 0 0 0;
+			}
+			
+
+			& > *:not(:first-child) {
+				margin-top: 25px;
+			}
+		}
+
+		// .get-in-touch__form--row
+
+		&--row {
+			display: grid;
+			@include _550 {
+				grid-template-columns: 1fr 1fr;
+			}
+			gap: 25px;
+			@include _768 {
+				gap: 25px 40px;
+			}
+		}
+	}
+
+	// .get-in-touch__title
+
+	&__title {
+	}
+
+	// .get-in-touch__text
+
+	&__text {
+		padding-top: 10px;
+		@include _992 {
+			padding-top: 30px;
+		}
+		@media (min-width: 1440px) {
+			padding-top: 76px;
+		}
+	}
+
+	// .get-in-touch__label
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .get-in-touch__name
+
+	&__name {
+		display: block;
+		padding-bottom: 10px;
+
+		font-weight: 500;
+		font-size: 1.125rem;
+		line-height: 166.666667%;
+
+		&._required {
+			&::after {
+				content: '*';
+				color: var(--accent);
+			}
+		}
+	}
+
+	// .get-in-touch__input
+
+	&__input {
+	}
+
+	// .get-in-touch__select
+
+	&__select {
+
+		// .get-in-touch__select--wrapper
+
+		&--wrapper {
+		}
+	}
+
+	// .get-in-touch__textarea
+
+	&__textarea {
+	}
+
+	// .get-in-touch__submit
+
+	&__submit {
+		max-width: 220px;
+		width: 100%;
+		margin-top: 5px;
+	}
+}
+

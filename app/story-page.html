@@ -1,0 +1,105 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="story-page">
+			<div class="story-page__featured-image">
+				<picture>
+					<source srcset="img/single-story/single-story-intro.webp" type="image/webp">
+					<img src="img/single-story/single-story-intro.jpg" alt="" width="1920" height="900" loading="lazy">
+				</picture>
+			</div>
+			<div class="story-page__wrapper container">
+				<div class="story-page__content">
+					<div class="story-page__content--col">
+						<h1 class="story-page__title title _large">
+							Shoreditch Studios Wedding
+						</h1>
+						<h2 class="story-page__event">
+							Emma + Seb`s wedding at Shoreditch Studios, London
+						</h2>
+						<a href="stories.html" class="story-page__forward">
+							&lt; Back to Photography
+						</a>
+					</div>
+					<div class="story-page__content--col">
+						<div class="story-page__text">
+							<p>
+								A Shoreditch Studios wedding for you on the blog today, and I have to admit, I’d been looking forward to shooting this since Emma and Seb booked me in. It’s one of those venues that is revered in the wedding photography community, as we all like to shoot at a cool London wedding venue during the wedding season, and Shoreditch Studios is most certainly right up there.
+							</p>
+							<p>
+								There’s a real warehouse vibe to it, which could be down to the fact Shoreditch Studios is housed in renovated railway arches, directly under the East London overground railway line. The venue is comprised of two high ceiling studio spaces: Studio 1 and Studio 2. Studio 1 is the main space, which is used for the ceremony and/or wedding breakfast, and has the floor to ceiling white infinity cove; perfect for displaying personalised wedding messages, or video/picture projections. There’s also a mezzanine (great for staging a live acoustic set during the ceremony/reception) and a spiral staircase, which I’ve heard has been used quite successfully for the speeches. Then there’s Studio 2 aka the party room. Similar in style to Studio 1, but a tad smaller, and perfect for moving into the evening festivities with minimal hassle.
+							</p>
+							<p>
+								There’s also a genuinely great team of suppliers, and I have to give a shout out to Andi at Halcyon Halcyon, who not only helped create that amazing floral design (along with his other-half Jayne) that you can see hovering above the speech makers, but he’s also a top guy as well! Already looking forward to the next wedding we’ve got together at Shoreditch Studios next year.
+							</p>
+						</div>
+					</div>
+					<div class="story-page__content--col">
+						<figure class="story-page__quote">
+							<blockquote>
+								<p>It was incredible looking through them and feeling like we were reliving the day. They captured the energy, joy and humour of our day so well. We are really so so happy with them - as are our family and friends who have subsequently been bombarded with them. I was at the Tate with a friend yesterday and had to get my phone out to go through them all with her too - there has been no escape for anyone.</p>
+							</blockquote>
+							<figcaption><cite>Emma + Seb</cite></figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="story-page__audio">
+					<h3 class="story-page__audio--name">
+						Allan Rayman - Rose
+					</h3>
+					<audio controls src="audio/audio.mp3" id="player"></audio>
+				</div>
+				<div class="story-page__gallery">
+					@@loop("html/_story-gallery-item.html", [
+						{
+							"image": '1',
+							"class": '',
+						},
+						{
+							"image": '2',
+							"class": '',
+						},
+						{
+							"image": '3',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '4',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '5',
+							"class": '',
+						},
+						{
+							"image": '6',
+							"class": '',
+						},
+						{
+							"image": '7',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '8',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '6',
+							"class": '',
+						},
+						{
+							"image": '9',
+							"class": '',
+						},
+					])
+				</div>
+				<div class="story-page__footer">
+					@@include("html/_share.html", {
+						"class": "story-page__share",
+					})
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

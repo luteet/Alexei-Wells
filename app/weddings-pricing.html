@@ -1,0 +1,122 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		@@include("html/_hero.html", {
+			"image_1": "img/stories/hero/stories-hero-image-1",
+			"image_2": "img/stories/hero/stories-hero-image-2",
+		})
+		<section class="service-packages container">
+			<div class="service-packages__content section-header-content">
+				<h2 class="section-header-content__title title">
+					Service Packages
+				</h2>
+				<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+				<div class="section-header-content__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+				</div>
+			</div>
+			<ul class="service-packages__list">
+				@@loop("html/_service-card.html", [
+					{
+						"title": "Micro & Intimate Weddings",
+						"time": "up to 5 hours",
+						"image": "1",
+						"price": "$500.00",
+					},
+					{
+						"title": "A Day to Remember",
+						"time": "6 hours",
+						"image": "2",
+						"price": "$950.00",
+					},
+					{
+						"title": "Precious Moments",
+						"time": "8 hours",
+						"image": "3",
+						"price": "$1200.00",
+					},
+					{
+						"title": "The Perfect Day",
+						"time": "10 hours",
+						"image": "4",
+						"price": "$1600.00",
+					},
+					{
+						"title": "A Love Story Told",
+						"time": "12 hours",
+						"image": "5",
+						"price": "$950.00",
+					},
+				])
+				<li class="service-packages__chat-card">
+					<div class="service-packages__chat-card--body">
+						<h3 class="service-packages__chat-card--title">Interested in working together? </h3>
+						<a href="#" class="service-packages__chat-card--btn btn">
+							Let's chat
+						</a>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="extras container section-padding-top">
+			<h2 class="extras__title title">
+				Extras
+			</h2>
+			<ul class="extras__list">
+				<li>Engagement / Pre Wedding Photoshoot <b>from £250</b></li>
+				<li>Wedding Album <b>from £300</b></li>
+				<li>Parent Albums <b>from £200</b></li>
+				<li>Extra Hour of Photography <b>£150</b></li>
+			</ul>
+		</section>
+		<div class="service-list container">
+			<div class="service-list__wrapper">
+				<section class="service-list__block service-block">
+					<h2 class="service-block__title">
+						Engagement / Pre-Wedding Shoot
+					</h2>
+					<span class="service-block__price accent-span">from $500.00</span>
+					<div class="service-block__image">
+						<div class="service-block__image--body">
+							<picture>
+								<source srcset="img/pricing/service/service-image-1.webp" type="image/webp">
+								<img src="img/pricing/service/service-image-1.jpg" alt="" width="540" height="650" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="service-block__text">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Varius duis at consectetur lorem donec massa sapien faucibus. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. 
+						</p>
+					</div>
+					<a href="#" class="service-block__btn btn">
+						VIEW
+					</a>
+				</section>
+				<section class="service-list__block service-block">
+					<h2 class="service-block__title">
+						Wedding & Parent Albums
+					</h2>
+					<span class="service-block__price accent-span">from $500.00</span>
+					<div class="service-block__image">
+						<div class="service-block__image--body">
+							<picture>
+								<source srcset="img/pricing/service/service-image-2.webp" type="image/webp">
+								<img src="img/pricing/service/service-image-2.jpg" alt="" width="540" height="650" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="service-block__text">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Varius duis at consectetur lorem donec massa sapien faucibus. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. 
+						</p>
+					</div>
+					<a href="#" class="service-block__btn btn">
+						VIEW
+					</a>
+				</section>
+			</div>
+		</div>
+	</main>
+
+@@include("html/_footer.html")

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container _alt">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="158" height="29" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Homepage
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="stories.html">
+								Stories
+							</a>
+						</li>
+						<li>
+							<a href="process.html">
+								Info
+							</a>
+						</li>
+						<li>
+							<a href="pricing.html">
+								Pricing
+							</a>
+							<ul>
+								<li>
+									<a href="weddings-pricing.html">
+										Weddings
+									</a>
+								</li>
+								<li>
+									<a href="engagement-pricing.html">
+										Engagements
+									</a>
+								</li>
+								<li>
+									<a href="albums-pricing.html">
+										Albums
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="get-in-touch.html">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				Menu
+			</button>
+		</header>
+		<script>
+			document.querySelector('html').style.setProperty("--height-screen-min", window.innerHeight - document.querySelector('.header').offsetHeight + "px");
+		</script>
+
+		<main class="main">
+			<section class="hero container">
+				<div class="hero__image">
+					<div class="hero__image--body image-body">
+						<picture>
+							<source srcset="img/stories/hero/stories-hero-image-1.webp" type="image/webp">
+							<img src="img/stories/hero/stories-hero-image-1.jpg" alt="" width="420" height="260" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<h1 class="hero__title title">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				</h1>
+				<div class="hero__text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+				</div>
+				<div class="hero__image">
+					<div class="hero__image--body image-body">
+						<picture>
+							<source srcset="img/stories/hero/stories-hero-image-2.webp" type="image/webp">
+							<img src="img/stories/hero/stories-hero-image-2.jpg" alt="" width="420" height="260" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<button class="hero__explore btn-to-scroll _to-down">
+					Explore
+					<svg width="8" height="20" viewBox="0 0 8 20">
+						<use xlink:href="img/sprites.svg#arrow-to-down"></use>
+					</svg>
+				</button>
+			</section>
+			<section class="service-packages container">
+				<div class="service-packages__content section-header-content">
+					<h2 class="section-header-content__title title">
+						Service Packages
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+					</div>
+				</div>
+				<ul class="service-packages__list">
+					<li class="service-packages__card">
+						<h3 class="service-packages__card--title">
+							Micro & Intimate Weddings
+						</h3>
+						<span class="service-packages__card--time accent-span">
+							up to 5 hours
+						</span>
+						<div class="service-packages__card--content">
+							<p>
+								Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean.
+							</p>
+							<p>
+							<figure>
+								<picture>
+									<source srcset="img/pricing/service-packages/service-packages-image-1.webp" type="image/webp">
+									<img src="img/pricing/service-packages/service-packages-image-1.jpg" alt="" width="400" height="200" loading="lazy">
+								</picture>
+							</figure>
+							</p>
+							<ul>
+								<li>
+									Lorem ipsum dolor sit amet
+								</li>
+								<li>
+									Consectetur adipiscing elit
+								</li>
+								<li>
+									Sed do eiusmod tempor
+								</li>
+								<li>
+									Incididunt ut labore
+								</li>
+							</ul>
+						</div>
+						<b class="service-packages__card--price">$500.00</b>
+					</li>
+					<li class="service-packages__card">
+						<h3 class="service-packages__card--title">
+							A Day to Remember
+						</h3>
+						<span class="service-packages__card--time accent-span">
+							6 hours
+						</span>
+						<div class="service-packages__card--content">
+							<p>
+								Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean.
+							</p>
+							<p>
+							<figure>
+								<picture>
+									<source srcset="img/pricing/service-packages/service-packages-image-2.webp" type="image/webp">
+									<img src="img/pricing/service-packages/service-packages-image-2.jpg" alt="" width="400" height="200" loading="lazy">
+								</picture>
+							</figure>
+							</p>
+							<ul>
+								<li>
+									Lorem ipsum dolor sit amet
+								</li>
+								<li>
+									Consectetur adipiscing elit
+								</li>
+								<li>
+									Sed do eiusmod tempor
+								</li>
+								<li>
+									Incididunt ut labore
+								</li>
+							</ul>
+						</div>
+						<b class="service-packages__card--price">$950.00</b>
+					</li>
+					<li class="service-packages__chat-card">
+						<div class="service-packages__chat-card--body">
+							<h3 class="service-packages__chat-card--title">Interested in working together? </h3>
+							<a href="#" class="service-packages__chat-card--btn btn">
+								Let's chat
+							</a>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<div class="service-list container">
+				<div class="service-list__wrapper">
+					<section class="service-list__block service-block">
+						<h2 class="service-block__title">
+							Engagement / Pre-Wedding Shoot
+						</h2>
+						<span class="service-block__price accent-span">from $500.00</span>
+						<div class="service-block__image">
+							<div class="service-block__image--body">
+								<picture>
+									<source srcset="img/pricing/service/service-image-1.webp" type="image/webp">
+									<img src="img/pricing/service/service-image-1.jpg" alt="" width="540" height="650" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="service-block__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Varius duis at consectetur lorem donec massa sapien faucibus. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque.
+							</p>
+						</div>
+						<a href="#" class="service-block__btn btn">
+							VIEW
+						</a>
+					</section>
+					<section class="service-list__block service-block">
+						<h2 class="service-block__title">
+							Wedding & Parent Albums
+						</h2>
+						<span class="service-block__price accent-span">from $500.00</span>
+						<div class="service-block__image">
+							<div class="service-block__image--body">
+								<picture>
+									<source srcset="img/pricing/service/service-image-2.webp" type="image/webp">
+									<img src="img/pricing/service/service-image-2.jpg" alt="" width="540" height="650" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="service-block__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Varius duis at consectetur lorem donec massa sapien faucibus. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque.
+							</p>
+						</div>
+						<a href="#" class="service-block__btn btn">
+							VIEW
+						</a>
+					</section>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer container _min">
+			<button type="button" class="footer__to-top btn-to-scroll" aria-label="TO THE TOP OF THE PAGE">
+				<span>TO THE TOP OF THE PAGE</span>
+			</button>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Facebook">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Instagram">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Pinterest">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__gallery">
+				<ul>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-1.webp" type="image/webp">
+								<img src="img/footer/grid-image-1.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-2.webp" type="image/webp">
+								<img src="img/footer/grid-image-2.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-3.webp" type="image/webp">
+								<img src="img/footer/grid-image-3.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-4.webp" type="image/webp">
+								<img src="img/footer/grid-image-4.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__text">
+				Use this space to talk about your business. Don't forget to use keywords to describe your business to help with your search engine optimization.
+			</div>
+			<div class="footer__contact">
+				<h3 class="footer__contact--title">
+					Contact
+				</h3>
+				<ul>
+					<li>
+						<a href="#" class="btn _light _min">
+							Get in touch
+						</a>
+					</li>
+					<li>
+						<a href="mailto:info@photographer.com">
+							info@photographer.com
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380446988888">
+							+38 044 698 88 88
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav--image">
+					<div class="footer__nav--image-body image-body">
+						<picture>
+							<source srcset="img/footer/nav-image.webp" type="image/webp">
+							<img src="img/footer/nav-image.jpg" alt="" width="190" height="190" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<ul class="footer__nav--list">
+					<li>
+						<a href="#">
+							Homepage
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Stories
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Info
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Pricing
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__copy">
+				COPYRIGHT © 2023 ALEXEI WELLS. <br> ALL RIGHTS RESERVED.
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

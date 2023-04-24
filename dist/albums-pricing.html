@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container _alt">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="158" height="29" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Homepage
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="stories.html">
+								Stories
+							</a>
+						</li>
+						<li>
+							<a href="process.html">
+								Info
+							</a>
+						</li>
+						<li>
+							<a href="pricing.html">
+								Pricing
+							</a>
+							<ul>
+								<li>
+									<a href="weddings-pricing.html">
+										Weddings
+									</a>
+								</li>
+								<li>
+									<a href="engagement-pricing.html">
+										Engagements
+									</a>
+								</li>
+								<li>
+									<a href="albums-pricing.html">
+										Albums
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="get-in-touch.html">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				Menu
+			</button>
+		</header>
+		<script>
+			document.querySelector('html').style.setProperty("--height-screen-min", window.innerHeight - document.querySelector('.header').offsetHeight + "px");
+		</script>
+
+		<main class="main">
+			<section class="hero container">
+				<div class="hero__image">
+					<div class="hero__image--body image-body">
+						<picture>
+							<source srcset="img/stories/hero/stories-hero-image-1.webp" type="image/webp">
+							<img src="img/stories/hero/stories-hero-image-1.jpg" alt="" width="420" height="260" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<h1 class="hero__title title">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				</h1>
+				<div class="hero__text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+				</div>
+				<div class="hero__image">
+					<div class="hero__image--body image-body">
+						<picture>
+							<source srcset="img/stories/hero/stories-hero-image-2.webp" type="image/webp">
+							<img src="img/stories/hero/stories-hero-image-2.jpg" alt="" width="420" height="260" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<button class="hero__explore btn-to-scroll _to-down">
+					Explore
+					<svg width="8" height="20" viewBox="0 0 8 20">
+						<use xlink:href="img/sprites.svg#arrow-to-down"></use>
+					</svg>
+				</button>
+			</section>
+			<section class="albums section-padding-top">
+				<div class="albums__content section-header-content container">
+					<h2 class="section-header-content__title title">
+						Albums With Love
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+					</div>
+				</div>
+				<div class="albums__slider album-slider swiper">
+					<div class="album-slider__wrapper swiper-wrapper">
+						<div class="album-slider__slide swiper-slide">
+							<div class="album-slider__slide--image image-body">
+								<picture>
+									<source srcset="img/pricing/albums/albums-slide-1.webp" type="image/webp">
+									<img src="img/pricing/albums/albums-slide-1.jpg" alt="" width="1004" height="600" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="album-slider__slide swiper-slide">
+							<div class="album-slider__slide--image image-body">
+								<picture>
+									<source srcset="img/pricing/albums/albums-slide-2.webp" type="image/webp">
+									<img src="img/pricing/albums/albums-slide-2.jpg" alt="" width="1004" height="600" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="album-slider__slide swiper-slide">
+							<div class="album-slider__slide--image image-body">
+								<picture>
+									<source srcset="img/pricing/albums/albums-slide-3.webp" type="image/webp">
+									<img src="img/pricing/albums/albums-slide-3.jpg" alt="" width="1004" height="600" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="album-slider__nav">
+						<button class="album-slider__arrow swiper-button-prev" title="Prev slide">
+							<svg width="81" height="15" viewBox="0 0 81 15">
+								<use xlink:href="img/sprites.svg#slider-arrow-1-prev"></use>
+							</svg>
+						</button>
+						<button class="album-slider__arrow swiper-button-next" title="Next slide">
+							<svg width="81" height="15" viewBox="0 0 81 15">
+								<use xlink:href="img/sprites.svg#slider-arrow-1-next"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="wedding-photo-albums container section-padding-top">
+				<h2 class="wedding-photo-albums__title title">
+					Fine Art Wedding Photo Albums
+				</h2>
+				<span class="wedding-photo-albums__accent-span accent-span">Handmade in the UK using the finest ink & paper</span>
+				<div class="wedding-photo-albums__image">
+					<div class="wedding-photo-albums__image--body">
+						<picture>
+							<source srcset="img/pricing/fine-art/fine-art-image.webp" type="image/webp">
+							<img src="img/pricing/fine-art/fine-art-image.jpg" alt="" width="695" height="830" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<div class="wedding-photo-albums__text text">
+					<p>Tell your wedding story in the best possible way. You're investing in wedding photography because your photos mean a lot to you.</p>
+					<p>They're taken to be held, relived at random hours of the day, and passed around the coffee table when friends and family visit.</p>
+					<p>You're also busy, I get it (whether busy with life or busy lounging on the sofa watching netflix)! Which is why I will do all the designing and ordering for you. All you have to do is open the door when the postman arrives.</p>
+					<p>Watch the video below to find out more!</p>
+				</div>
+			</section>
+			<section class="features container section-padding-top">
+				<h2 class="features__title title">
+					Features
+				</h2>
+				<ul class="features__list">
+					<li>10x10" hand-bound album made with the finest quality cover materials, papers and inks</li>
+					<li>Images printed directly on to the page</li>
+					<li>Each double spread opens out flat with an almost invisible crease so your photographs can be displayed across two pages</li>
+					<li>Freedom to print across the crease for unrestricted layout designs</li>
+					<li>Archival ink printed on fine art paper to create the best prints I have ever seen & to last a lifetime (i.e. no fading ink/discolouration/yellowing</li>
+					<li>Incredible range of personalisation options including cover printing, foiling, and embossing</li>
+					<li>8x8" albums for your parents also available</li>
+				</ul>
+			</section>
+			<section class="few-steps container section-padding-top">
+				<div class="few-steps__content section-header-content">
+					<h2 class="section-header-content__title title">
+						Few Simple Steps
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+					</div>
+				</div>
+				<ul class="few-steps__list">
+					<li class="few-steps__item">
+						<div class="few-steps__item--image">
+							<div class="few-steps__item--image-body image-body">
+								<picture>
+									<source srcset="img/pricing/steps/steps-image-1.webp" type="image/webp">
+									<img src="img/pricing/steps/steps-image-1.jpg" alt="" width="283" height="320" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="few-steps__item--content">
+							<div class="few-steps__item--number number"></div>
+							<h3>
+								Fill in the order form below
+							</h3>
+							<p>
+								Tell me the materials and personalisation options you would like!
+							</p>
+						</div>
+					</li>
+					<li class="few-steps__item">
+						<div class="few-steps__item--image">
+							<div class="few-steps__item--image-body image-body">
+								<picture>
+									<source srcset="img/pricing/steps/steps-image-2.webp" type="image/webp">
+									<img src="img/pricing/steps/steps-image-2.jpg" alt="" width="283" height="320" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="few-steps__item--content">
+							<div class="few-steps__item--number number"></div>
+							<h3>
+								Proof your album
+							</h3>
+							<p>
+								Sit back and relax whilst I design and arrange your album. After that, I'll send you an online proof where you can go through each page. You can easily make comments on each page if you'd like to switch out images/make adjustments.
+							</p>
+						</div>
+					</li>
+					<li class="few-steps__item">
+						<div class="few-steps__item--image">
+							<div class="few-steps__item--image-body image-body">
+								<picture>
+									<source srcset="img/pricing/steps/steps-image-3.webp" type="image/webp">
+									<img src="img/pricing/steps/steps-image-3.jpg" alt="" width="283" height="320" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="few-steps__item--content">
+							<div class="few-steps__item--number number"></div>
+							<h3>
+								Your album is sent off
+							</h3>
+							<p>
+								Once everything is perfect and I've got your seal of approval, your album will be sent to a little workshop in Yorkshire to be made. Production will take up to 21 days.
+							</p>
+						</div>
+					</li>
+					<li class="few-steps__item">
+						<div class="few-steps__item--image">
+							<div class="few-steps__item--image-body image-body">
+								<picture>
+									<source srcset="img/pricing/steps/steps-image-4.webp" type="image/webp">
+									<img src="img/pricing/steps/steps-image-4.jpg" alt="" width="283" height="320" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="few-steps__item--content">
+							<div class="few-steps__item--number number"></div>
+							<h3>
+								Open the door
+							</h3>
+							<p>
+								It will feel like Christmas day, the day your album arrives. Open the door and receive your album. Touch it, show it off, display it. It's your pride and joy.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="section-pricing container section-padding-top">
+				<div class="section-pricing__content section-header-content">
+					<h2 class="section-header-content__title title">
+						Pricing
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+					</div>
+				</div>
+				<ul class="section-pricing__list">
+					<li class="section-pricing__item">
+						<h3>
+							10x10" Album & Two Parent Albums
+						</h3>
+						<p>
+							Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean.
+						</p>
+						<p>
+							<b>
+								$1050.00
+							</b>
+						</p>
+					</li>
+					<li class="section-pricing__item">
+						<h3>
+							10x10" Album
+						</h3>
+						<p>
+							Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean.
+						</p>
+						<p>
+							<b>
+								$600.00
+							</b>
+						</p>
+					</li>
+					<li class="section-pricing__item">
+						<h3>
+							8x8" Parent Album
+						</h3>
+						<p>
+							Non consectetur a erat nam at lectus. Non curabitur gravida arcu ac tortor dignissim convallis aenean.
+						</p>
+						<p>
+							<b>
+								$300.00
+							</b>
+						</p>
+					</li>
+				</ul>
+			</section>
+			<section class="faq container section-padding-top-large">
+				<div class="faq__content info-header _min section-header-content">
+					<h2 class="section-header-content__title title">
+						Questions & Answers
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+					</div>
+				</div>
+				<ul class="faq__list">
+					<li class="faq__item">
+						<div class="faq__number number"></div>
+						<h3 class="faq__question">
+							How long will my album take to arrive?
+							</How long will my album take to arrive?>
+							<div class="faq__answear">
+								<p>
+									Once you have proofed and checked over your final album, it will be sent off to be made. As it is a custom product and handmade, it will take up to 21 working days to arrive.
+								</p>
+							</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__number number"></div>
+						<h3 class="faq__question">
+							Why are the albums so expensive?
+							</Why are the albums so expensive?>
+							<div class="faq__answear">
+								<p>
+									You get what you pay for! Only the finest materials, inks and paper are used to create your album, and everything is responsibly sourced. Furthermore, your album is handmade (by real people!) to ensure that high quality. Once you've gotten your hands on your album, you'd wonder why you were even considering getting a £30 photobook from Tesco.
+								</p>
+							</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__number number"></div>
+						<h3 class="faq__question">
+							Can I order my album after the wedding?
+							</Can I order my album after the wedding?>
+							<div class="faq__answear">
+								<p>
+									We will cover all travelling and overnight costs. If you are getting married abroad please pop an email through to us as we have a dedicated destination wedding brochure.
+								</p>
+							</div>
+					</li>
+					<li class="faq__item">
+						<div class="faq__number number"></div>
+						<h3 class="faq__question">
+							How many spreads do I get in my album?
+							</How many spreads do I get in my album?>
+							<div class="faq__answear">
+								<p>
+									1 spread = 2 sides. <br> Your wedding album includes 20 spreads. Additional spreads can be added for £20 each.
+								</p>
+							</div>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="footer container _min">
+			<button type="button" class="footer__to-top btn-to-scroll" aria-label="TO THE TOP OF THE PAGE">
+				<span>TO THE TOP OF THE PAGE</span>
+			</button>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Facebook">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Instagram">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Pinterest">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__gallery">
+				<ul>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-1.webp" type="image/webp">
+								<img src="img/footer/grid-image-1.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-2.webp" type="image/webp">
+								<img src="img/footer/grid-image-2.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-3.webp" type="image/webp">
+								<img src="img/footer/grid-image-3.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-4.webp" type="image/webp">
+								<img src="img/footer/grid-image-4.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__text">
+				Use this space to talk about your business. Don't forget to use keywords to describe your business to help with your search engine optimization.
+			</div>
+			<div class="footer__contact">
+				<h3 class="footer__contact--title">
+					Contact
+				</h3>
+				<ul>
+					<li>
+						<a href="#" class="btn _light _min">
+							Get in touch
+						</a>
+					</li>
+					<li>
+						<a href="mailto:info@photographer.com">
+							info@photographer.com
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380446988888">
+							+38 044 698 88 88
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav--image">
+					<div class="footer__nav--image-body image-body">
+						<picture>
+							<source srcset="img/footer/nav-image.webp" type="image/webp">
+							<img src="img/footer/nav-image.jpg" alt="" width="190" height="190" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<ul class="footer__nav--list">
+					<li>
+						<a href="#">
+							Homepage
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Stories
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Info
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Pricing
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__copy">
+				COPYRIGHT © 2023 ALEXEI WELLS. <br> ALL RIGHTS RESERVED.
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

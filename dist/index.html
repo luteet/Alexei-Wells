@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container _alt">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="158" height="29" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Homepage
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="stories.html">
+								Stories
+							</a>
+						</li>
+						<li>
+							<a href="process.html">
+								Info
+							</a>
+						</li>
+						<li>
+							<a href="pricing.html">
+								Pricing
+							</a>
+							<ul>
+								<li>
+									<a href="weddings-pricing.html">
+										Weddings
+									</a>
+								</li>
+								<li>
+									<a href="engagement-pricing.html">
+										Engagements
+									</a>
+								</li>
+								<li>
+									<a href="albums-pricing.html">
+										Albums
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="get-in-touch.html">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				Menu
+			</button>
+		</header>
+		<script>
+			document.querySelector('html').style.setProperty("--height-screen-min", window.innerHeight - document.querySelector('.header').offsetHeight + "px");
+		</script>
+
+		<main class="main">
+			<section class="index-hero container">
+				<div class="index-hero__bg-slider swiper">
+					<div class="index-hero__bg-slider--wrapper swiper-wrapper">
+						<div class="index-hero__bg-slider--slide swiper-slide">
+							<picture>
+								<source srcset="img/index/intro/index-slide.webp" type="image/webp">
+								<img src="img/index/intro/index-slide.jpg" alt="" width="1920" height="820" loading="lazy">
+							</picture>
+						</div>
+						<div class="index-hero__bg-slider--slide swiper-slide">
+							<picture>
+								<source srcset="img/index/kind-words/kind-words-slide.webp" type="image/webp">
+								<img src="img/index/kind-words/kind-words-slide.jpg" alt="" width="1920" height="820" loading="lazy">
+							</picture>
+						</div>
+						<div class="index-hero__bg-slider--slide swiper-slide">
+							<picture>
+								<source srcset="img/info/info-hero.webp" type="image/webp">
+								<img src="img/info/info-hero.jpg" alt="" width="1920" height="820" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="index-hero__slider swiper">
+					<div class="index-hero__slider--wrapper swiper-wrapper">
+						<div class="index-hero__slider--slide index-hero__slide swiper-slide">
+							<h1 class="index-hero__slide--title title _large">
+								Multi-Award Winning International Female Photographer
+							</h1>
+							<div class="index-hero__slide--text">
+								<p>
+									London wedding photographer: Elle UK magazine Top 12 wedding photographers
+								</p>
+							</div>
+						</div>
+						<div class="index-hero__slider--slide index-hero__slide swiper-slide">
+							<h1 class="index-hero__slide--title title _large">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, similique!
+							</h1>
+							<div class="index-hero__slide--text">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor omnis dolores quod pariatur animi!
+								</p>
+							</div>
+						</div>
+						<div class="index-hero__slider--slide index-hero__slide swiper-slide">
+							<h1 class="index-hero__slide--title title _large">
+								Lorem ipsum dolor sit amet consectetur adipisicing.
+							</h1>
+							<div class="index-hero__slide--text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, dolorum. Nulla laboriosam suscipit eum laudantium neque est sint rerum atque.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="index-hero__nav container">
+					<button class="index-hero__nav--btn swiper-button-prev" title="Prev slide">
+						<svg width="81" height="15" viewBox="0 0 81 15">
+							<use xlink:href="img/sprites.svg#slider-arrow-1-prev"></use>
+						</svg>
+					</button>
+					<button class="index-hero__nav--btn swiper-button-next" title="Next slide">
+						<svg width="81" height="15" viewBox="0 0 81 15">
+							<use xlink:href="img/sprites.svg#slider-arrow-1-next"></use>
+						</svg>
+					</button>
+				</div>
+			</section>
+			<section class="about">
+				<div class="about__content">
+					<h1 class="about__title title">
+						Creative London Wedding Photographer
+					</h1>
+					<h2 class="about__subtitle">
+						NEW YORK CITY WEDDING PLANNER
+					</h2>
+					<div class="about__text">
+						<p>
+							Good day - I'm from Ukraine! My name is Roman Savosko, I am a wedding and family photographer, and I shoot various events. At the meeting, I ask each couple the question - what does your wedding mean to you? In response, I hear many versions, but for me, a wedding means the union of two families for the whole day, and my task is to reflect this event.
+						</p>
+					</div>
+				</div>
+				<div class="about__image image-body">
+					<picture>
+						<source srcset="img/index/about/about-image.webp" type="image/webp">
+						<img src="img/index/about/about-image.jpg" alt="" width="1920" height="600" loading="lazy">
+					</picture>
+				</div>
+			</section>
+			<section class="about-photographer container">
+				<h2 class="about-photographer__title title">
+					Roman Savosko - London Wedding Photographer
+				</h2>
+				<span class="about-photographer__accent-span accent-span">
+					Creating natural, timeless photos of your special day.
+				</span>
+				<div class="about-photographer__picture">
+					<div class="about-photographer__picture--image image-body">
+						<picture>
+							<source srcset="img/index/wedding-photographer/wedding-photographer-image.webp" type="image/webp">
+							<img src="img/index/wedding-photographer/wedding-photographer-image.jpg" alt="" width="695" height="830" loading="lazy">
+						</picture>
+					</div>
+					<b class="about-photographer__picture--text">
+						Acclaimed wedding photography in London, throughout the UK and overseas filled with creativity, joy, humour and love
+					</b>
+					<a href="get-in-touch.html" class="about-photographer__picture--link btn">
+						Get in touch
+					</a>
+				</div>
+				<div class="about-photographer__content">
+					<div class="about-photographer__content--wrapper">
+						<p>As a wedding photographer, I have one simple goal: to take unposed pictures of genuine moments. Moments that will make you laugh, cry and become lost for words as you relive all that took place on your wedding day.</p>
+						<p>Knowing I’ll be taking care of this allows you to relax, take everything in and love every minute of the day you spent countless hours planning.</p>
+						<p>I’m a London wedding photographer, but travel across the whole of the UK, and internationally. Whatever or wherever your wedding venue is, a luxury London hotel, an idyllic barn in the Cotswolds or a rustic French château, I’ll capture everything you dreamed of – and more.</p>
+						<p>There’s no single event that better encapsulates all the emotions we go through than a wedding. Excitement, nerves, relief, elation – it’s all there.</p>
+						<p>My aim is for you to look back on your wedding photos and remember what actually happened on your big day. Not what was set-up.</p>
+						<p>Over the years our images have won us many top awards, most recently, UK wedding photographer of the year 2019, 2020, and again in 2021 awarded to us by 'The Wedding Industry Awards' (TWIA) and 'The British Institute of Professional Photography' (BIPP). Liam is also listed as one of the world's best wedding photographers through SLR Lounge and one of the world's best destination wedding photographers through Junebug Weddings. We are a proud recommended artist with 'World's Best Wedding Photos' based in the United States. </p>
+						<p>If you are a couple looking for one of the best UK Wedding Photographers, a London wedding photographer, international wedding photographer, elopement photographer or engagement photographer who can deliver an incredible set of story telling moments from your wedding day filled with joy and love.</p>
+					</div>
+				</div>
+			</section>
+			<section class="true">
+				<div class="true__content section-header-content container">
+					<h2 class="section-header-content__title title">
+						True, Authentie Love
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+					</div>
+				</div>
+				<div class="true__slider album-slider swiper">
+					<div class="album-slider__wrapper swiper-wrapper">
+						<div class="album-slider__slide swiper-slide">
+							<div class="album-slider__slide--image image-body">
+								<picture>
+									<source srcset="img/index/true/true-slide-1.webp" type="image/webp">
+									<img src="img/index/true/true-slide-1.jpg" alt="" width="1004" height="600" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="album-slider__slide swiper-slide">
+							<div class="album-slider__slide--image image-body">
+								<picture>
+									<source srcset="img/index/true/true-slide-2.webp" type="image/webp">
+									<img src="img/index/true/true-slide-2.jpg" alt="" width="1004" height="600" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="album-slider__slide swiper-slide">
+							<div class="album-slider__slide--image image-body">
+								<picture>
+									<source srcset="img/index/true/true-slide-3.webp" type="image/webp">
+									<img src="img/index/true/true-slide-3.jpg" alt="" width="1004" height="600" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="album-slider__nav">
+						<button class="album-slider__arrow swiper-button-prev" title="Prev slide">
+							<svg width="81" height="15" viewBox="0 0 81 15">
+								<use xlink:href="img/sprites.svg#slider-arrow-1-prev"></use>
+							</svg>
+						</button>
+						<button class="album-slider__arrow swiper-button-next" title="Next slide">
+							<svg width="81" height="15" viewBox="0 0 81 15">
+								<use xlink:href="img/sprites.svg#slider-arrow-1-next"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="experience container _large">
+				<div class="experience__header section-header-content _center">
+					<h2 class="section-header-content__title title">
+						Experience & Knowledge
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+				</div>
+				<div class="experience__image">
+					<div class="experience__image--body image-body">
+						<picture>
+							<source srcset="img/index/experience/experience-image-1.webp" type="image/webp">
+							<img src="img/index/experience/experience-image-1.jpg" alt="" width="494" height="768" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<div class="experience__content">
+					<p>Having spent two decades in the wedding industry as a wedding photographer in the UK, throughout London and overseas I am confident I have seen it all. I still find it mad to think I have photographed over 900 weddings all over the world for all sorts of different people! I've photographed Jewish weddings, Hindu weddings, Muslim weddings, Sikh weddings, Greek weddings, Chinese weddings church weddings, barn weddings, festival weddings, LGBT weddings ... in fact, I don't think there is a type of wedding out there I haven't photographed!</p>
+					<p>It's been a crazy journey and over these years I've picked up a heap of knowledge. From the early planning stages, to the day itself and then afterwards, Bee and I have answers and solutions to any situation and are ready to help every step of the way.</p>
+					<p>I don't see myself as just a wedding photographer on the big day. I know weddings inside out and can sort of become your unofficial planner on the big day itself. Stepping in when you're concerned about anything and steering the ship to make sure everything runs smoothly and on time!</p>
+					<p>When you book me to photograph your London, UK or overseas wedding you're not just getting an accomplished wedding photographer.</p>
+				</div>
+				<div class="experience__picture">
+					<div class="experience__picture--image">
+						<div class="experience__picture--image-body image-body">
+							<picture>
+								<source srcset="img/index/experience/experience-image-2.webp" type="image/webp">
+								<img src="img/index/experience/experience-image-2.jpg" alt="" width="428" height="428" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="experience__picture--text">
+						Wedding Photographer London, UK & Destinations
+					</div>
+				</div>
+			</section>
+			<section class="section-nav container section-padding-top">
+				<h2 class="visually-hidden">Navigation</h2>
+				<ul class="section-nav__list">
+					<li class="section-nav__list--item">
+						<a href="process.html" class="section-nav__card" aria-label="What to expect he process">
+							<div class="section-nav__card--image image-body">
+								<picture>
+									<source srcset="img/index/section-nav/section-nav-image-1.webp" type="image/webp">
+									<img src="img/index/section-nav/section-nav-image-1.jpg" alt="" width="487" height="689" loading="lazy">
+								</picture>
+							</div>
+							<div class="section-nav__card--content">
+								<span class="section-nav__card--span">WHAT TO EXPECt</span>
+								<h3 class="section-nav__card--title title">
+									The Process
+								</h3>
+							</div>
+						</a>
+					</li>
+					<li class="section-nav__list--item">
+						<a href="faq.html" class="section-nav__card" aria-label="Answers on FAQ">
+							<div class="section-nav__card--image image-body">
+								<picture>
+									<source srcset="img/index/section-nav/section-nav-image-2.webp" type="image/webp">
+									<img src="img/index/section-nav/section-nav-image-2.jpg" alt="" width="487" height="689" loading="lazy">
+								</picture>
+							</div>
+							<div class="section-nav__card--content">
+								<span class="section-nav__card--span">Answers on</span>
+								<h3 class="section-nav__card--title title">
+									FAQ
+								</h3>
+							</div>
+						</a>
+					</li>
+					<li class="section-nav__list--item">
+						<a href="about.html" class="section-nav__card" aria-label="Meet the photographer">
+							<div class="section-nav__card--image image-body">
+								<picture>
+									<source srcset="img/index/section-nav/section-nav-image-3.webp" type="image/webp">
+									<img src="img/index/section-nav/section-nav-image-3.jpg" alt="" width="487" height="689" loading="lazy">
+								</picture>
+							</div>
+							<div class="section-nav__card--content">
+								<span class="section-nav__card--span">MEET THE</span>
+								<h3 class="section-nav__card--title title">
+									Photographer
+								</h3>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="the-style container section-padding-top">
+				<div class="the-style__content section-header-content _column">
+					<h2 class="section-header-content__title title">
+						The Style
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+				</div>
+				<ul class="the-style__list">
+					<li class="the-style__item">
+						<div class="the-style__item--image image-body">
+							<picture>
+								<source srcset="img/index/the-style/the-style-image-1.webp" type="image/webp">
+								<img src="img/index/the-style/the-style-image-1.jpg" alt="" width="460" height="260" loading="lazy">
+							</picture>
+						</div>
+						<div class="the-style__item--content">
+							<h3>Faucibus Interdum</h3>
+							<p>
+								Ultrices tincidunt arcu non sodales neque sodales ut etiam. Sed blandit libero volutpat sed cras ornare. Est velit egestas dui id ornare arcu.
+							</p>
+						</div>
+					</li>
+					<li class="the-style__item">
+						<div class="the-style__item--image image-body">
+							<picture>
+								<source srcset="img/index/the-style/the-style-image-2.webp" type="image/webp">
+								<img src="img/index/the-style/the-style-image-2.jpg" alt="" width="460" height="260" loading="lazy">
+							</picture>
+						</div>
+						<div class="the-style__item--content">
+							<h3>Pellentesque</h3>
+							<p>
+								Ultrices tincidunt arcu non sodales neque sodales ut etiam. Sed blandit libero volutpat sed cras ornare. Est velit egestas dui id ornare arcu.
+							</p>
+						</div>
+					</li>
+					<li class="the-style__item">
+						<div class="the-style__item--image image-body">
+							<picture>
+								<source srcset="img/index/the-style/the-style-image-3.webp" type="image/webp">
+								<img src="img/index/the-style/the-style-image-3.jpg" alt="" width="460" height="260" loading="lazy">
+							</picture>
+						</div>
+						<div class="the-style__item--content">
+							<h3>Dignissim Sodales</h3>
+							<p>
+								Ultrices tincidunt arcu non sodales neque sodales ut etiam. Sed blandit libero volutpat sed cras ornare. Est velit egestas dui id ornare arcu.
+							</p>
+						</div>
+					</li>
+					<li class="the-style__item">
+						<div class="the-style__item--image image-body">
+							<picture>
+								<source srcset="img/index/the-style/the-style-image-4.webp" type="image/webp">
+								<img src="img/index/the-style/the-style-image-4.jpg" alt="" width="460" height="260" loading="lazy">
+							</picture>
+						</div>
+						<div class="the-style__item--content">
+							<h3>Ullamcorper</h3>
+							<p>
+								Ultrices tincidunt arcu non sodales neque sodales ut etiam. Sed blandit libero volutpat sed cras ornare. Est velit egestas dui id ornare arcu.
+							</p>
+						</div>
+					</li>
+				</ul>
+				<a href="portfolio.html" class="the-style__btn btn">
+					VIEW PORTFOLIO
+				</a>
+			</section>
+			<section class="kind-words container section-padding-top">
+				<div class="kind-words__content section-header-content">
+					<h2 class="section-header-content__title title">
+						Kind Words
+					</h2>
+					<span class="section-header-content__accent-span accent-span">Take a look through our portfolio below</span>
+					<div class="section-header-content__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi eget mauris pharetra et ultrices neque ornare aenean. Massa placerat duis ultricies lacus. Rutrum quisque non tellus orci ac auctor.</p>
+					</div>
+				</div>
+				<div class="kind-words__slider-nav swiper">
+					<div class="kind-words__slider-nav--wrapper swiper-wrapper">
+						<div class="kind-words__slider-nav--slide swiper-slide">
+							Rach & Pete
+						</div>
+						<div class="kind-words__slider-nav--slide swiper-slide">
+							Kay & Kasra
+						</div>
+						<div class="kind-words__slider-nav--slide swiper-slide">
+							Sally & Jim
+						</div>
+						<div class="kind-words__slider-nav--slide swiper-slide">
+							Jenny & Dave
+						</div>
+						<div class="kind-words__slider-nav--slide swiper-slide">
+							Emily & Dave
+						</div>
+					</div>
+				</div>
+				<div class="kind-words__slider swiper">
+					<div class="kind-words__slider--wrapper swiper-wrapper">
+						<div class="kind-words__slider--slide kind-words__slide swiper-slide">
+							<div class="kind-words__slide--bg">
+								<picture>
+									<source srcset="img/index/kind-words/kind-words-slide.webp" type="image/webp">
+									<img src="img/index/kind-words/kind-words-slide.jpg" alt="" width="1520" height="660" loading="lazy">
+								</picture>
+							</div>
+							<div class="kind-words__slide--content">
+								<h3 class="kind-words__slide--couple title">
+									Rach & Pete
+								</h3>
+								<div class="kind-words__slide--text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque egestas diam in arcu cursus euismod. In cursus turpis massa tincidunt dui ut. Egestas sed tempus urna et pharetra pharetra massa.
+								</div>
+							</div>
+						</div>
+						<div class="kind-words__slider--slide kind-words__slide swiper-slide">
+							<div class="kind-words__slide--bg">
+								<picture>
+									<source srcset="img/info/wedding-photoshoot/wedding-photoshoot-image-1.webp" type="image/webp">
+									<img src="img/info/wedding-photoshoot/wedding-photoshoot-image-1.jpg" alt="" width="1520" height="660" loading="lazy">
+								</picture>
+							</div>
+							<div class="kind-words__slide--content">
+								<h3 class="kind-words__slide--couple title">
+									Kay & Kasra
+								</h3>
+								<div class="kind-words__slide--text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque egestas diam in arcu cursus euismod. In cursus turpis massa tincidunt dui ut. Egestas sed tempus urna et pharetra pharetra massa.
+								</div>
+							</div>
+						</div>
+						<div class="kind-words__slider--slide kind-words__slide swiper-slide">
+							<div class="kind-words__slide--bg">
+								<picture>
+									<source srcset="img/info/wedding-photoshoot/wedding-photoshoot-image-2.webp" type="image/webp">
+									<img src="img/info/wedding-photoshoot/wedding-photoshoot-image-2.jpg" alt="" width="1520" height="660" loading="lazy">
+								</picture>
+							</div>
+							<div class="kind-words__slide--content">
+								<h3 class="kind-words__slide--couple title">
+									Sally & Jim
+								</h3>
+								<div class="kind-words__slide--text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque egestas diam in arcu cursus euismod. In cursus turpis massa tincidunt dui ut. Egestas sed tempus urna et pharetra pharetra massa.
+								</div>
+							</div>
+						</div>
+						<div class="kind-words__slider--slide kind-words__slide swiper-slide">
+							<div class="kind-words__slide--bg">
+								<picture>
+									<source srcset="img/info/wedding-photoshoot/wedding-photoshoot-image-3.webp" type="image/webp">
+									<img src="img/info/wedding-photoshoot/wedding-photoshoot-image-3.jpg" alt="" width="1520" height="660" loading="lazy">
+								</picture>
+							</div>
+							<div class="kind-words__slide--content">
+								<h3 class="kind-words__slide--couple title">
+									Jenny & Dave
+								</h3>
+								<div class="kind-words__slide--text">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolor aperiam provident delectus illo soluta nobis in pariatur ex incidunt! Optio atque voluptas aperiam vel consequuntur, ad unde eveniet! Asperiores!
+									Exercitationem nesciunt sequi quaerat. Fugit quas laudantium corporis ipsum beatae molestiae officia et recusandae, neque, repellendus quisquam facilis ut voluptas voluptatibus exercitationem cumque nobis at quia doloribus. Ipsum, blanditiis expedita?
+								</div>
+							</div>
+						</div>
+						<div class="kind-words__slider--slide kind-words__slide swiper-slide">
+							<div class="kind-words__slide--bg">
+								<picture>
+									<source srcset="img/info/wedding-photoshoot/wedding-photoshoot-image-4.webp" type="image/webp">
+									<img src="img/info/wedding-photoshoot/wedding-photoshoot-image-4.jpg" alt="" width="1520" height="660" loading="lazy">
+								</picture>
+							</div>
+							<div class="kind-words__slide--content">
+								<h3 class="kind-words__slide--couple title">
+									Emily & Dave
+								</h3>
+								<div class="kind-words__slide--text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque egestas diam in arcu cursus euismod. In cursus turpis massa tincidunt dui ut. Egestas sed tempus urna et pharetra pharetra massa.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="kind-words__slider--nav">
+						<button class="kind-words__slider--arrow swiper-button-prev" title="Prev slide">
+							<svg width="28" height="80" viewBox="0 0 28 80" class="hide-on-mob">
+								<use xlink:href="img/sprites.svg#slider-arrow-2-prev"></use>
+							</svg>
+							<svg width="81" height="15" viewBox="0 0 81 15" class="visible-on-mob">
+								<use xlink:href="img/sprites.svg#slider-arrow-1-prev"></use>
+							</svg>
+						</button>
+						<button class="kind-words__slider--arrow swiper-button-next" title="Next slide">
+							<svg width="28" height="80" viewBox="0 0 28 80" class="hide-on-mob">
+								<use xlink:href="img/sprites.svg#slider-arrow-2-next"></use>
+							</svg>
+							<svg width="81" height="15" viewBox="0 0 81 15" class="visible-on-mob">
+								<use xlink:href="img/sprites.svg#slider-arrow-1-next"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="section-text-nav container">
+				<div class="section-text-nav__item">
+					<h2 class="section-text-nav__title title">
+						Let`s Talk The Details
+					</h2>
+					<div class="section-text-nav__text">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque egestas diam in arcu cursus euismod.
+						</p>
+					</div>
+					<a href="pricing.html" class="section-text-nav__link btn">
+						Pricing
+					</a>
+				</div>
+				<div class="section-text-nav__item">
+					<h2 class="section-text-nav__title title">
+						Appoint a Schedule
+					</h2>
+					<div class="section-text-nav__text">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque egestas diam in arcu cursus euismod.
+						</p>
+					</div>
+					<a href="get-in-touch.html" class="section-text-nav__link btn">
+						Get in touch
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer container _min">
+			<button type="button" class="footer__to-top btn-to-scroll" aria-label="TO THE TOP OF THE PAGE">
+				<span>TO THE TOP OF THE PAGE</span>
+			</button>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Facebook">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Instagram">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Pinterest">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__gallery">
+				<ul>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-1.webp" type="image/webp">
+								<img src="img/footer/grid-image-1.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-2.webp" type="image/webp">
+								<img src="img/footer/grid-image-2.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-3.webp" type="image/webp">
+								<img src="img/footer/grid-image-3.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-4.webp" type="image/webp">
+								<img src="img/footer/grid-image-4.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__text">
+				Use this space to talk about your business. Don't forget to use keywords to describe your business to help with your search engine optimization.
+			</div>
+			<div class="footer__contact">
+				<h3 class="footer__contact--title">
+					Contact
+				</h3>
+				<ul>
+					<li>
+						<a href="#" class="btn _light _min">
+							Get in touch
+						</a>
+					</li>
+					<li>
+						<a href="mailto:info@photographer.com">
+							info@photographer.com
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380446988888">
+							+38 044 698 88 88
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav--image">
+					<div class="footer__nav--image-body image-body">
+						<picture>
+							<source srcset="img/footer/nav-image.webp" type="image/webp">
+							<img src="img/footer/nav-image.jpg" alt="" width="190" height="190" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<ul class="footer__nav--list">
+					<li>
+						<a href="#">
+							Homepage
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Stories
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Info
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Pricing
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__copy">
+				COPYRIGHT © 2023 ALEXEI WELLS. <br> ALL RIGHTS RESERVED.
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

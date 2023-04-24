@@ -1,0 +1,97 @@
+.few-steps {
+
+	// .few-steps__content
+
+	&__content {
+	}
+
+	// .few-steps__list
+
+	&__list {
+		padding-top: 43px;
+
+		display: grid;
+		@include _768 {
+			grid-template-columns: 46% auto;
+		}
+		gap: 40px 35px;
+		@include _992 {
+			grid-template-columns: 46% auto;
+			gap: 60px 85px;
+		}
+
+		counter-reset: step_number;
+	}
+
+	// .few-steps__item
+
+	&__item {
+
+		display: flex;
+		flex-direction: column-reverse;
+		@media (min-width: 1250px) {
+			flex-direction: row;
+		}
+
+		// .few-steps__item--image
+
+		&--image {
+			flex: 0 1 39.5%;
+
+			margin-top: 30px;
+
+			@media (min-width: 1250px) {
+				margin-top: 0;
+			}
+		}
+
+		// .few-steps__item--content
+
+		&--content {
+			flex: 0 1 60.5%;
+			@media (min-width: 1250px) {
+				padding-left: 61px;
+			}
+
+			& h3 {
+				font-size: 1.5rem;
+				line-height: 150%;
+
+				padding-top: 20px;
+
+				@include _992 {
+					font-size: 1.75rem;
+					line-height: 185.714286%;
+
+					padding-top: 34px;
+				}
+			}
+
+			& p {
+				font-size: 1rem;
+				font-weight: 300;
+				line-height: 200%;
+				@include _992 {
+					font-size: 1.125rem;
+				}
+			}
+		}
+
+		&:nth-child(-n + 9) &--number::before {
+			content: "0"counter(step_number)".";
+		}
+
+		// .few-steps__item--number
+
+		&--number {
+			margin-top: 5px;
+			
+			&::before {
+				counter-increment: step_number;
+				content: counter(step_number)".";
+			
+			}
+			
+		}
+	}
+}

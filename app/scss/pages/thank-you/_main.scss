@@ -1,0 +1,84 @@
+@use 'sass:math';
+
+.thank-you {
+
+	display: grid;
+
+	@include _992 {
+		margin-top: 70px;
+	}
+	
+
+	// .thank-you__image
+
+	&__image {
+
+		margin: 0 calc(0px - var(--container-padding));
+		min-height: 300px;
+
+		@media(min-width: 1440px) {
+			grid-area: 1/1;
+
+			margin: 0;
+			width: 100%;
+			padding-right: calc(50% + 50px);
+		}
+
+		// .thank-you__image--body
+
+		&--body {
+			min-height: 100%;
+			/* @media (min-width: 1440px) {
+				min-width: 615px;
+			} */
+
+			& img {
+				/* @media(min-width: 1440px) {
+					object-position: 42%;
+				} */
+			}
+		}
+	}
+
+	// .thank-you__content
+
+	&__content {
+
+		
+		padding-left: var(--container-padding); padding-top: 50px;
+		
+		@media (min-width: #{$containerMin}px) {
+			padding-left: var(--container-padding);
+		}
+
+		@media (min-width: 1440px) {
+			grid-area: 1/1;
+
+			padding-left: calc(50% + 55px); padding-top: 0;
+		}
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&--wrapper {
+
+		}
+	}
+
+	// .thank-you__text
+
+	&__text {
+	}
+
+	// .thank-you__btn
+
+	&__btn {
+		margin-top: 30px;
+		max-width: 220px; width: 100%;
+
+		@include _992 {
+			margin-top: 40px;
+		}
+	}
+}

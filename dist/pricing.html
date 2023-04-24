@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container _alt">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="158" height="29" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Homepage
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="stories.html">
+								Stories
+							</a>
+						</li>
+						<li>
+							<a href="process.html">
+								Info
+							</a>
+						</li>
+						<li>
+							<a href="pricing.html">
+								Pricing
+							</a>
+							<ul>
+								<li>
+									<a href="weddings-pricing.html">
+										Weddings
+									</a>
+								</li>
+								<li>
+									<a href="engagement-pricing.html">
+										Engagements
+									</a>
+								</li>
+								<li>
+									<a href="albums-pricing.html">
+										Albums
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="get-in-touch.html">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				Menu
+			</button>
+		</header>
+		<script>
+			document.querySelector('html').style.setProperty("--height-screen-min", window.innerHeight - document.querySelector('.header').offsetHeight + "px");
+		</script>
+
+		<main class="main">
+			<section class="pricing container">
+				<div class="pricing__header">
+					<h1 class="pricing__title title">
+						Exceptional Wedding Photography
+					</h1>
+					<h2 class="pricing__subtitle">
+						PHOTOS THAT ILLUSTRATE THE BEST OF YOUR DAY
+					</h2>
+					<nav class="pricing__nav">
+						<ul class="pricing__list">
+							<li class="pricing__card">
+								<a href="weddings-pricing.html" class="pricing__card--image image-body" aria-label="Weddings">
+									<picture>
+										<source srcset="img/pricing/nav/pricing-nav-image-1.webp" type="image/webp">
+										<img src="img/pricing/nav/pricing-nav-image-1.jpg" alt="" width="487" height="720" loading="lazy">
+									</picture>
+								</a>
+								<h3 class="pricing__card--title">
+									Weddings
+								</h3>
+								<a href="pricing-wedding.html" class="pricing__card--link accent-span">
+									View
+								</a>
+							</li>
+							<li class="pricing__card">
+								<a href="engagements-pricing.html" class="pricing__card--image image-body">
+									<picture>
+										<source srcset="img/pricing/nav/pricing-nav-image-2.webp" type="image/webp">
+										<img src="img/pricing/nav/pricing-nav-image-2.jpg" alt="" width="487" height="720" loading="lazy">
+									</picture>
+								</a>
+								<h3 class="pricing__card--title">
+									Engagements
+								</h3>
+								<a href="#" class="pricing__card--link accent-span">
+									View
+								</a>
+							</li>
+							<li class="pricing__card">
+								<a href="albums-pricing.html" class="pricing__card--image image-body">
+									<picture>
+										<source srcset="img/pricing/nav/pricing-nav-image-3.webp" type="image/webp">
+										<img src="img/pricing/nav/pricing-nav-image-3.jpg" alt="" width="487" height="720" loading="lazy">
+									</picture>
+								</a>
+								<h3 class="pricing__card--title">
+									Albums
+								</h3>
+								<a href="#" class="pricing__card--link accent-span">
+									View
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer container _min">
+			<button type="button" class="footer__to-top btn-to-scroll" aria-label="TO THE TOP OF THE PAGE">
+				<span>TO THE TOP OF THE PAGE</span>
+			</button>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Facebook">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Instagram">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Pinterest">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__gallery">
+				<ul>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-1.webp" type="image/webp">
+								<img src="img/footer/grid-image-1.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-2.webp" type="image/webp">
+								<img src="img/footer/grid-image-2.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-3.webp" type="image/webp">
+								<img src="img/footer/grid-image-3.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-4.webp" type="image/webp">
+								<img src="img/footer/grid-image-4.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__text">
+				Use this space to talk about your business. Don't forget to use keywords to describe your business to help with your search engine optimization.
+			</div>
+			<div class="footer__contact">
+				<h3 class="footer__contact--title">
+					Contact
+				</h3>
+				<ul>
+					<li>
+						<a href="#" class="btn _light _min">
+							Get in touch
+						</a>
+					</li>
+					<li>
+						<a href="mailto:info@photographer.com">
+							info@photographer.com
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380446988888">
+							+38 044 698 88 88
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav--image">
+					<div class="footer__nav--image-body image-body">
+						<picture>
+							<source srcset="img/footer/nav-image.webp" type="image/webp">
+							<img src="img/footer/nav-image.jpg" alt="" width="190" height="190" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<ul class="footer__nav--list">
+					<li>
+						<a href="#">
+							Homepage
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Stories
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Info
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Pricing
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__copy">
+				COPYRIGHT © 2023 ALEXEI WELLS. <br> ALL RIGHTS RESERVED.
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

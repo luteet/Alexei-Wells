@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container _alt">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="158" height="29" loading="lazy" class="header__logo--img">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Homepage
+							</a>
+						</li>
+						<li>
+							<a href="portfolio.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="stories.html">
+								Stories
+							</a>
+						</li>
+						<li>
+							<a href="process.html">
+								Info
+							</a>
+						</li>
+						<li>
+							<a href="pricing.html">
+								Pricing
+							</a>
+							<ul>
+								<li>
+									<a href="weddings-pricing.html">
+										Weddings
+									</a>
+								</li>
+								<li>
+									<a href="engagement-pricing.html">
+										Engagements
+									</a>
+								</li>
+								<li>
+									<a href="albums-pricing.html">
+										Albums
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="get-in-touch.html">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				Menu
+			</button>
+		</header>
+		<script>
+			document.querySelector('html').style.setProperty("--height-screen-min", window.innerHeight - document.querySelector('.header').offsetHeight + "px");
+		</script>
+
+		<main class="main">
+			<section class="info-hero">
+				<div class="info-hero__bg">
+					<picture>
+						<source srcset="img/info/info-hero.webp" type="image/webp">
+						<img src="img/info/info-hero.jpg" alt="" width="1920" height="650" loading="lazy">
+					</picture>
+				</div>
+				<div class="info-hero__content container">
+					<h1 class="info-hero__title title _large">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					</h1>
+				</div>
+				<nav class="info-hero__nav">
+					<div class="info-hero__nav--body">
+						<ul>
+							<li>
+								<a href="process.html">
+									THE PROCESS
+								</a>
+							</li>
+							<li>
+								<a href="faq.html">
+									FAQ
+								</a>
+							</li>
+							<li>
+								<a href="about.html">
+									ABOUT
+								</a>
+							</li>
+							<li>
+								<a href="kind-words.html">
+									KIND WORDS
+								</a>
+							</li>
+							<li>
+								<a href="pre-wedding-photoshoot-explained.html">
+									PRE WEDDING PHOTOSHOOT EXPLAINED
+								</a>
+							</li>
+							<li>
+								<a href="wedding-photoshoot-explained.html">
+									WEDDING PHOTOSHOOT EXPLAINED
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</section>
+			<section class="kind-words container">
+				<div class="kind-words__content info-header section-header-content _column">
+					<h1 class="section-header-content__title title">
+						Kind Words
+					</h1>
+					<span class="section-header-content__accent-span accent-span">Creating natural, timeless photos of your special day.</span>
+				</div>
+				<ul class="kind-words__list">
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="Hannah + Nick">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-1.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-1.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">Hannah + Nick</h2>
+								<span class="kind-words__place accent-span">Fabrica Wedding, Brighton</span>
+								<div class="kind-words__text text">
+									<p>
+										Finally, the blubbing has stopped and I’ve managed to summon up some words that express the inexpressible! “HOLY SH!T.” From the bottom of our collective heart, thank you. They are beautifully observed and captured. They left both of us jaw on the floor and not a dry eye in the house. Honestly, we can’t thank you enough.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="Lucia + Kilian">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-2.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-2.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">Lucia + Kilian</h2>
+								<span class="kind-words__place accent-span">Town Hall Hotel Wedding</span>
+								<div class="kind-words__text text">
+									<p>
+										Kristiaaaaaaaaaaaan! Still don’t know what to say. How amazing to be able to see the wedding like this, weird how you really only see one thin slice through the day as the bride and groom…but you’ve captured all the memories I have in the most beautiful way. Everyone else loves them too. My family WhatsApp is on fire today!!!!!
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="John + Rachel">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-3.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-3.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">John + Rachel</h2>
+								<span class="kind-words__place accent-span">Royal Hospital Chelsea, London</span>
+								<div class="kind-words__text text">
+									<p>
+										Oh WOW. YOU ARE INCREDIBLE. How how HOW have you SO MANY amazing shots - literally 508 of them. We. Love. THEM. Seriously amazed and overjoyed. We are so grateful. AND I was fighting myself to not put too high expectations on you - they were still up there despite myself and just WOW.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="Ellie + Phil">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-4.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-4.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">Ellie + Phil</h2>
+								<span class="kind-words__place accent-span">Hotel Endsleigh Wedding</span>
+								<div class="kind-words__text text">
+									<p>
+										Kristian we are truly blown away by your photos. We never dreamed it would be possible to capture the day with such sensitivity, tenderness, poetry and precision. They are thoroughly magical. For once I am actually lost for words. A thousand thank yous - we feel very lucky to have shared the day with you.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="Florence + Callum">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-5.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-5.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">Florence + Callum</h2>
+								<span class="kind-words__place accent-span">Aswarby Rectory Wedding</span>
+								<div class="kind-words__text text">
+									<p>
+										We’re still in slight shock at how amazing these are! We’ve been through them every day, reliving each moment you’ve captured. You’ve managed to capture all of the joy and happiness we experienced during the day and some amazing interactions with some of our favourite people.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="Bronwyn + George">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-6.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-6.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">Bronwyn + George</h2>
+								<span class="kind-words__place accent-span">Sopley Mill Wedding</span>
+								<div class="kind-words__text text">
+									<p>
+										Just…wow. Dude, can not tell you how much we love these!! Can’t stop scrolling through them all the way through today, and each time I do I have a new favourite, haha. You’ve captured everyone we had there so well, and going through them just feels like living the day all over again. The bouncy castle pics especially are hilarious.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="Kavita + James">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-7.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-7.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">Kavita + James</h2>
+								<span class="kind-words__place accent-span">Belvoir Castle Wedding</span>
+								<div class="kind-words__text text">
+									<p>
+										Where do we begin!? Kristian you are INCREDIBLE! Every single one of these photos captured every single moment of the day. We have looked at the photos over and over again, and it gets us EVERY time! We couldn’t possibly pick a favourite. From start (7am!) to finish you’ve helped create the most perfect memories! We can’t thank you enough!
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="kind-words__item">
+						<a href="#" class="kind-words__item--body" aria-label="Gemma + Mike">
+							<div class="kind-words__image">
+								<div class="kind-words__image--body image-body">
+									<picture>
+										<source srcset="img/info/kind-words/kind-words-image-8.webp" type="image/webp">
+										<img src="img/info/kind-words/kind-words-image-8.jpg" alt="" width="590" height="650" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<div class="kind-words__info">
+								<h2 class="kind-words__couple title">Gemma + Mike</h2>
+								<span class="kind-words__place accent-span">Warehouse Wedding</span>
+								<div class="kind-words__text text">
+									<p>
+										Kristian…... Not quite sure how we can thank you enough…. Where to start! Suffice to say we have watched the highlights show several times (with tears) and have already been through the photos a few times as well! These are simply so beautiful, so fun and tell such a story of our day, that they will last a lifetime.
+									</p>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="kind-words__footer">
+					<nav class="kind-words__nav page-nav">
+						<a href="#" class="page-nav__arrow _prev">
+							<svg width="65" height="16" viewBox="0 0 65 16">
+								<use xlink:href="img/sprites.svg#arrow-prev">
+								</use>
+							</svg>
+							Prev posts
+						</a>
+						<div class="page-nav__list">
+							<a href="#">
+								1
+							</a>
+							<a href="#">
+								2
+							</a>
+							<a href="#">
+								3
+							</a>
+							<a href="#">
+								4
+							</a>
+							<a href="#">
+								...
+							</a>
+							<a href="#">
+								52
+							</a>
+						</div>
+						<a href="#" class="page-nav__arrow _next">
+							Next posts
+							<svg width="65" height="16" viewBox="0 0 65 16">
+								<use xlink:href="img/sprites.svg#arrow-next">
+								</use>
+							</svg>
+						</a>
+					</nav>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer container _min">
+			<button type="button" class="footer__to-top btn-to-scroll" aria-label="TO THE TOP OF THE PAGE">
+				<span>TO THE TOP OF THE PAGE</span>
+			</button>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Facebook">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Instagram">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Pinterest">
+							<svg width="27" height="27" viewBox="0 0 27 27">
+								<use xlink:href="img/sprites.svg#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__gallery">
+				<ul>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-1.webp" type="image/webp">
+								<img src="img/footer/grid-image-1.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-2.webp" type="image/webp">
+								<img src="img/footer/grid-image-2.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-3.webp" type="image/webp">
+								<img src="img/footer/grid-image-3.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+					<li>
+						<div class="footer__gallery--image image-body">
+							<picture>
+								<source srcset="img/footer/grid-image-4.webp" type="image/webp">
+								<img src="img/footer/grid-image-4.jpg" alt="" width="190" height="190" loading="lazy">
+							</picture>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__text">
+				Use this space to talk about your business. Don't forget to use keywords to describe your business to help with your search engine optimization.
+			</div>
+			<div class="footer__contact">
+				<h3 class="footer__contact--title">
+					Contact
+				</h3>
+				<ul>
+					<li>
+						<a href="#" class="btn _light _min">
+							Get in touch
+						</a>
+					</li>
+					<li>
+						<a href="mailto:info@photographer.com">
+							info@photographer.com
+						</a>
+					</li>
+					<li>
+						<a href="tel:+380446988888">
+							+38 044 698 88 88
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav--image">
+					<div class="footer__nav--image-body image-body">
+						<picture>
+							<source srcset="img/footer/nav-image.webp" type="image/webp">
+							<img src="img/footer/nav-image.jpg" alt="" width="190" height="190" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<ul class="footer__nav--list">
+					<li>
+						<a href="#">
+							Homepage
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Portfolio
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Stories
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Info
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Pricing
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__copy">
+				COPYRIGHT © 2023 ALEXEI WELLS. <br> ALL RIGHTS RESERVED.
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+
+@use 'sass:math';
+
+$containerMin: 1156;
+$container: 1520;
+$container2: 1550;
+$containerLarge: 1800;
+
+:root {
+	--title-font: 'Edensor';
+	--main-font: 'Poppins', sans-serif;
+	
+	--accent: #C69B3F;
+	--accent-hover: #d6aa4b;
+	--accent-active: #b88c2e;
+
+	--white: #FFF;
+	--black: #000;
+	--text-color: #222222;
+	--dark: #1F1F1F;
+	--gray: #909090;
+
+	--container-padding: 20px;
+}
+
+@font-face {
+	@include font-include('Edensor', 400, swap, normal, 'EdensorRegular');
+}
+
+@font-face {
+	@include font-include('Inter', 500, swap, normal, 'Inter-Medium');
+}
+
+@font-face {
+	@include font-include('Poppins', 300, swap, normal, 'Poppins-Light');
+}
+
+@font-face {
+	@include font-include('Poppins', 400, swap, normal, 'Poppins-Regular');
+}
+
+@font-face {
+	@include font-include('Poppins', 500, swap, normal, 'Poppins-Medium');
+}
+
+@font-face {
+	@include font-include('Poppins', 600, swap, normal, 'Poppins-SemiBold');
+}
+
+@font-face {
+	@include font-include('Poppins', 700, swap, normal, 'Poppins-Bold');
+}
