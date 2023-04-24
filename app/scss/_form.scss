@@ -4,6 +4,11 @@
 	font-weight: 300;
 	line-height: 125%;
 
+	background: var(--white);
+	color: var(--text-color);
+
+	width: 100%; min-height: 60px;
+
 	border-radius: 0;
 
 	&::placeholder {
@@ -20,6 +25,10 @@
 	}
 
 	
+}
+
+.datepicker-cell.selected, .datepicker-cell.selected:hover {
+	background: var(--accent);
 }
 
 .textarea {
@@ -44,10 +53,15 @@ input, textarea {
 
 	& select {
 		width: 100%;
-		padding: 19px 25px;
+		padding: 20px 25px;
 
 		font-weight: 300;
 		line-height: 125%;
+
+		min-height: 60px;
+
+		background: var(--white);
+		color: var(--text-color);
 
 		cursor: pointer;
 
@@ -64,3 +78,5 @@ input, textarea {
 
 	pointer-events: none;
 }
+
+

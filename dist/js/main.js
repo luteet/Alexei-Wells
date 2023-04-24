@@ -80,7 +80,7 @@ body.addEventListener('click', function (event) {
 				const btnScrollParent = btnToScroll.closest('section');
 				window.scrollTo({
 					left: 0,
-					top: btnScrollParent.offsetTop + window.innerHeight,
+					top: btnScrollParent.offsetTop + btnScrollParent.offsetHeight + (btnToScroll.offsetHeight * 2),
 					behavior: "smooth"
 				})
 			} else {
@@ -357,6 +357,10 @@ var player = new MediaElementPlayer('player', {
 	console.log(player.currentTime);
 },3000) */
 
+const elem = document.querySelector('.date-input');
+const datepicker = new Datepicker(elem, {
+  // ...options
+}); 
 
 /* 
 // =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=

@@ -310,7 +310,12 @@ section {
 
 .page-nav {
 
-	padding-top: 75px;
+
+	padding-top: 30px;
+
+	@include _992 {
+		padding-top: 75px;
+	}
 
 	display: flex;
 	flex-wrap: wrap;

@@ -121,6 +121,13 @@
 	&__label {
 		display: flex;
 		flex-direction: column;
+
+		&--wrapper {
+			display: flex;
+			position: relative;
+
+			background: var(--white);
+		}
 	}
 
 	// .get-in-touch__name
@@ -144,6 +151,13 @@
 	// .get-in-touch__input
 
 	&__input {
+	}
+
+	&__input-icon {
+		fill: var(--accent);
+		align-self: center;
+		margin: 0 20px;
+		pointer-events: none;
 	}
 
 	// .get-in-touch__select

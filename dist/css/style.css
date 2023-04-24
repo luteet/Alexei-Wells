@@ -11,8 +11,12 @@ progress,sub,sup {
     padding: 0
 }
 
-.swiper-vertical>.swiper-wrapper,body {
+.datepicker-picker,.swiper-vertical>.swiper-wrapper,body {
     flex-direction: column
+}
+
+.btn,.datepicker-controls .button,.datepicker-title,.header__nav--list>li,.mejs__captions-layer,.mejs__time,.mejs__time-float,.mejs__time-float-current,.section-header-content._center,.swiper-pagination,.swiper-zoom-container,.txt-center {
+    text-align: center
 }
 
 body {
@@ -394,6 +398,10 @@ summary {
     transform: translateZ(0)
 }
 
+.header__logo,.swiper-pagination {
+    -webkit-transform: translate3d(0,0,0)
+}
+
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
     content: "";
     position: absolute;
@@ -471,9 +479,7 @@ summary {
 
 .swiper-pagination {
     position: absolute;
-    text-align: center;
     transition: .3s opacity;
-    -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     z-index: 10
 }
@@ -707,8 +713,7 @@ button.swiper-pagination-bullet {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center
+    align-items: center
 }
 
 .swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg {
@@ -885,10 +890,6 @@ button.swiper-pagination-bullet {
     vertical-align: top
 }
 
-.about__content,.btn,.footer__contact,.footer__copy,.footer__text,.header__nav--list>li,.hero__explore,.hero__title,.mejs__captions-layer,.mejs__time,.mejs__time-float,.mejs__time-float-current,.pricing__card,.pricing__header,.section-header-content._center,.section-nav__card,.section-text-nav,.stories__card,.txt-center {
-    text-align: center
-}
-
 .mejs__container video::-webkit-media-controls,.mejs__container video::-webkit-media-controls-panel,.mejs__container video::-webkit-media-controls-panel-container,.mejs__container video::-webkit-media-controls-start-playback-button {
     -webkit-appearance: none;
     display: none!important
@@ -906,7 +907,7 @@ button.swiper-pagination-bullet {
     outline: 0
 }
 
-.mejs__button>button:focus,.mejs__container-keyboard-inactive [role=slider],.mejs__container-keyboard-inactive [role=slider]:focus,.mejs__container-keyboard-inactive a,.mejs__container-keyboard-inactive a:focus,.mejs__container-keyboard-inactive button,.mejs__container-keyboard-inactive button:focus,.mejs__volume-button,:active,:focus,a:active,a:focus {
+.datepicker-controls .button:active,.datepicker-controls .button:focus,.mejs__button>button:focus,.mejs__container-keyboard-inactive [role=slider],.mejs__container-keyboard-inactive [role=slider]:focus,.mejs__container-keyboard-inactive a,.mejs__container-keyboard-inactive a:focus,.mejs__container-keyboard-inactive button,.mejs__container-keyboard-inactive button:focus,.mejs__volume-button,:active,:focus,a:active,a:focus {
     outline: 0
 }
 
@@ -937,7 +938,7 @@ button.swiper-pagination-bullet {
     z-index: 1000
 }
 
-.mejs__background,.mejs__mediaelement {
+.mejs__background,.mejs__mediaelement,.mejs__poster {
     left: 0;
     position: absolute;
     top: 0
@@ -951,10 +952,13 @@ button.swiper-pagination-bullet {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    left: 0;
-    position: absolute;
-    top: 0;
     z-index: 1
+}
+
+.mejs__controls,.mejs__overlay {
+    display: flex;
+    position: absolute;
+    left: 0
 }
 
 .mejs__poster-img {
@@ -964,10 +968,7 @@ button.swiper-pagination-bullet {
 
 .mejs__overlay {
     align-items: center;
-    display: flex;
     justify-content: center;
-    left: 0;
-    position: absolute;
     top: 0
 }
 
@@ -1026,12 +1027,9 @@ button.swiper-pagination-bullet {
 
 .mejs__controls {
     bottom: 0;
-    display: flex;
     height: 2.5rem;
-    left: 0;
     list-style-type: none;
     margin: 0;
-    position: absolute;
     width: 100%;
     z-index: 3
 }
@@ -1328,7 +1326,7 @@ button.swiper-pagination-bullet {
     display: none
 }
 
-.mejs__horizontal-volume-current,.mejs__horizontal-volume-total {
+.mejs__horizontal-volume-total {
     font-size: 1px;
     left: 0;
     margin: 0;
@@ -1339,7 +1337,12 @@ button.swiper-pagination-bullet {
 .mejs__horizontal-volume-current {
     border-radius: .125rem;
     border-right: .06rem solid #fff;
+    font-size: 1px;
     height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
     top: 0;
     width: 100%
 }
@@ -1372,6 +1375,10 @@ button.swiper-pagination-bullet {
     right: 50%;
     visibility: visible;
     width: 5.375rem
+}
+
+.datepicker-controls .next-button.disabled,.datepicker-controls .prev-button.disabled,.header__nav {
+    visibility: hidden
 }
 
 .mejs__chapters-button>.mejs__chapters-selector {
@@ -1485,13 +1492,13 @@ button.swiper-pagination-bullet {
     z-index: -1
 }
 
-.image-body,.main,.mejs__cannotplay,section {
-    position: relative
-}
-
 .mejs__cannotplay,.mejs__cannotplay a {
     color: #fff;
     font-size: .8em
+}
+
+.mejs__cannotplay {
+    position: relative
 }
 
 .mejs__cannotplay a,.mejs__cannotplay p {
@@ -1500,8 +1507,312 @@ button.swiper-pagination-bullet {
     width: 100%
 }
 
+.datepicker {
+    width: -webkit-min-content;
+    width: min-content
+}
+
+.datepicker:not(.active) {
+    display: none
+}
+
+.datepicker-dropdown {
+    padding-top: 4px;
+    position: absolute;
+    z-index: 20
+}
+
+.datepicker-controls .button,.image-body,.main,section {
+    position: relative
+}
+
+.datepicker-dropdown.datepicker-orient-top {
+    padding-bottom: 4px;
+    padding-top: 0
+}
+
+.datepicker-picker {
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex
+}
+
+.datepicker-dropdown .datepicker-picker {
+    box-shadow: 0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1)
+}
+
+.datepicker-main {
+    flex: auto;
+    padding: 2px
+}
+
+.datepicker-footer {
+    background-color: #f5f5f5;
+    box-shadow: inset 0 1px 1px rgba(10,10,10,.1)
+}
+
+.datepicker-title {
+    background-color: #f5f5f5;
+    box-shadow: inset 0 -1px 1px rgba(10,10,10,.1);
+    font-weight: 700;
+    padding: .375rem .75rem
+}
+
+.datepicker-controls {
+    display: flex
+}
+
+.datepicker-header .datepicker-controls {
+    padding: 2px 2px 0
+}
+
+.datepicker-controls .button {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #363636;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: center;
+    line-height: 1.5;
+    margin: 0;
+    padding: calc(.375em - 1px) .75em;
+    vertical-align: top;
+    white-space: nowrap
+}
+
+.datepicker-controls .button:hover {
+    border-color: #b8b8b8;
+    color: #363636
+}
+
+.datepicker-controls .button:focus {
+    border-color: #3273dc;
+    color: #363636
+}
+
+.datepicker-controls .button:focus:not(:active) {
+    box-shadow: 0 0 0 .125em rgba(50,115,220,.25)
+}
+
+.datepicker-controls .button:active {
+    border-color: #474747;
+    color: #363636
+}
+
+.datepicker-controls .button[disabled] {
+    cursor: not-allowed
+}
+
+.datepicker-header .datepicker-controls .button {
+    border-color: transparent;
+    font-weight: 700
+}
+
+.datepicker-header .datepicker-controls .button:hover {
+    background-color: #f9f9f9
+}
+
+.datepicker-header .datepicker-controls .button:active {
+    background-color: #f2f2f2
+}
+
+.datepicker-footer .datepicker-controls .button {
+    border-radius: 2px;
+    flex: auto;
+    font-size: .75rem;
+    margin: calc(.375rem - 1px) .375rem
+}
+
+.datepicker-controls .view-switch {
+    flex: auto
+}
+
+.datepicker-controls .next-button,.datepicker-controls .prev-button {
+    flex: 0 0 14.2857142857%;
+    padding-left: .375rem;
+    padding-right: .375rem
+}
+
 *,fieldset {
     padding: 0
+}
+
+.datepicker-grid,.datepicker-view {
+    display: flex
+}
+
+.datepicker-view {
+    align-items: stretch;
+    width: 15.75rem
+}
+
+.datepicker-grid {
+    flex: auto;
+    flex-wrap: wrap
+}
+
+.datepicker .days {
+    display: flex;
+    flex: auto;
+    flex-direction: column
+}
+
+.datepicker .days-of-week {
+    display: flex
+}
+
+.datepicker .week-numbers {
+    display: flex;
+    flex: 0 0 9.6774193548%;
+    flex-direction: column
+}
+
+.datepicker .weeks {
+    align-items: stretch;
+    display: flex;
+    flex: auto;
+    flex-direction: column
+}
+
+.datepicker span {
+    -webkit-touch-callout: none;
+    align-items: center;
+    border-radius: 4px;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.datepicker .dow {
+    font-size: .875rem;
+    font-weight: 700;
+    height: 1.5rem
+}
+
+.datepicker .week {
+    color: #b8b8b8;
+    flex: auto;
+    font-size: .75rem
+}
+
+.datepicker .days .dow,.datepicker-cell {
+    flex-basis: 14.2857142857%
+}
+
+.datepicker-cell {
+    height: 2.25rem
+}
+
+.datepicker-cell:not(.day) {
+    flex-basis: 25%;
+    height: 4.5rem
+}
+
+.image-body img,.image-body::after,body,html {
+    width: 100%;
+    height: 100%
+}
+
+.datepicker-cell:not(.disabled):hover {
+    background-color: #f9f9f9;
+    cursor: pointer
+}
+
+.datepicker-cell.focused:not(.selected) {
+    background-color: #e9e9e9
+}
+
+.datepicker-cell.selected,.datepicker-cell.selected:hover {
+    background-color: #3273dc;
+    color: #fff;
+    font-weight: 600
+}
+
+.datepicker-cell.disabled {
+    color: #dcdcdc
+}
+
+.datepicker-cell.next:not(.disabled),.datepicker-cell.prev:not(.disabled) {
+    color: #7a7a7a
+}
+
+.datepicker-cell.next.selected,.datepicker-cell.prev.selected {
+    color: #e6e6e6
+}
+
+.datepicker-cell.highlighted:not(.selected):not(.range):not(.today) {
+    background-color: #f5f5f5;
+    border-radius: 0
+}
+
+.datepicker-cell.highlighted:not(.selected):not(.range):not(.today):not(.disabled):hover {
+    background-color: #efefef
+}
+
+.datepicker-cell.highlighted:not(.selected):not(.range):not(.today).focused {
+    background-color: #e9e9e9
+}
+
+.datepicker-cell.today:not(.selected) {
+    background-color: #00d1b2
+}
+
+.datepicker-cell.today:not(.selected):not(.disabled) {
+    color: #fff
+}
+
+.datepicker-cell.today.focused:not(.selected) {
+    background-color: #00ccad
+}
+
+.datepicker-cell.range-end:not(.selected),.datepicker-cell.range-start:not(.selected) {
+    background-color: #b8b8b8;
+    color: #fff
+}
+
+.datepicker-cell.range-end.focused:not(.selected),.datepicker-cell.range-start.focused:not(.selected) {
+    background-color: #b3b3b3
+}
+
+.datepicker-cell.range-start:not(.range-end) {
+    border-radius: 4px 0 0 4px
+}
+
+.datepicker-cell.range-end:not(.range-start) {
+    border-radius: 0 4px 4px 0
+}
+
+.datepicker-cell.range {
+    background-color: #dcdcdc;
+    border-radius: 0
+}
+
+.datepicker-cell.range:not(.disabled):not(.focused):not(.today):hover {
+    background-color: #d7d7d7
+}
+
+.datepicker-cell.range.disabled {
+    color: #c6c6c6
+}
+
+.datepicker-cell.range.focused {
+    background-color: #d1d1d1
+}
+
+.datepicker-input.in-edit {
+    border-color: #276bda
+}
+
+.datepicker-input.in-edit:active,.datepicker-input.in-edit:focus {
+    box-shadow: 0 0 .25em .25em rgba(39,107,218,.2)
 }
 
 * {
@@ -1566,6 +1877,10 @@ img {
     vertical-align: top
 }
 
+.container,.hero__text {
+    padding-left: var(--container-padding)
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-size: inherit;
     font-weight: 400;
@@ -1601,8 +1916,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body,html {
-    height: 100%;
-    width: 100%;
     line-height: 1;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -1661,7 +1974,6 @@ section {
 }
 
 .container {
-    padding-left: var(--container-padding);
     padding-right: var(--container-padding)
 }
 
@@ -1670,23 +1982,15 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     background: var(--text-color);
     opacity: .1;
     pointer-events: none
-}
-
-.number::before,.process__number::before {
-    content: counter(block_number) "."
 }
 
 .image-body img {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     background: #d3d3d3
@@ -1750,6 +2054,10 @@ section {
     overflow: hidden
 }
 
+.page-nav__arrow,.select-wrapper {
+    position: relative
+}
+
 .more-content-wrapper p:nth-child(n+3) {
     display: none
 }
@@ -1783,7 +2091,7 @@ section {
 }
 
 .page-nav {
-    padding-top: 75px;
+    padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1798,8 +2106,7 @@ section {
     font-weight: 500;
     font-size: .875rem;
     line-height: 115.384615%;
-    transition: opacity .3s ease;
-    position: relative
+    transition: opacity .3s ease
 }
 
 .page-nav__arrow._disabled {
@@ -1913,6 +2220,7 @@ p {
 
 .number::before {
     counter-increment: block_number;
+    content: counter(block_number) ".";
     display: block;
     font-family: var(--title-font);
     font-size: 2.25rem;
@@ -1921,16 +2229,27 @@ p {
     padding-bottom: 19px
 }
 
+.album-slider__slide--image::after,.header__burger::before,.header__nav--body::before,.index-hero__bg-slider::after,.info-hero__bg::after,.info-hero__nav::before,.kind-words__slide--bg::after,.kind-words__slider-nav--slide::before,.kind-words__slider-nav::after {
+    content: ""
+}
+
 .text {
     font-size: 1rem;
     font-weight: 300;
     line-height: 200%
 }
 
-.input,.textarea {
-    padding: 20px 25px;
+.input,.select-wrapper select,.textarea {
     font-weight: 300;
     line-height: 125%;
+    color: var(--text-color)
+}
+
+.input,.textarea {
+    padding: 20px 25px;
+    background: var(--white);
+    width: 100%;
+    min-height: 60px;
     border-radius: 0
 }
 
@@ -1959,6 +2278,14 @@ p {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 4H23V3C23 2.73478 22.8946 2.48043 22.7071 2.29289C22.5196 2.10536 22.2652 2 22 2C21.7348 2 21.4804 2.10536 21.2929 2.29289C21.1054 2.48043 21 2.73478 21 3V4H11V3C11 2.73478 10.8946 2.48043 10.7071 2.29289C10.5196 2.10536 10.2652 2 10 2C9.73478 2 9.48043 2.10536 9.29289 2.29289C9.10536 2.48043 9 2.73478 9 3V4H6C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V26C4 26.5304 4.21071 27.0391 4.58579 27.4142C4.96086 27.7893 5.46957 28 6 28H26C26.5304 28 27.0391 27.7893 27.4142 27.4142C27.7893 27.0391 28 26.5304 28 26V6C28 5.46957 27.7893 4.96086 27.4142 4.58579C27.0391 4.21071 26.5304 4 26 4ZM9 6V7C9 7.26522 9.10536 7.51957 9.29289 7.70711C9.48043 7.89464 9.73478 8 10 8C10.2652 8 10.5196 7.89464 10.7071 7.70711C10.8946 7.51957 11 7.26522 11 7V6H21V7C21 7.26522 21.1054 7.51957 21.2929 7.70711C21.4804 7.89464 21.7348 8 22 8C22.2652 8 22.5196 7.89464 22.7071 7.70711C22.8946 7.51957 23 7.26522 23 7V6H26V10H6V6H9ZM26 26H6V12H26V26Z' fill='%23C69B3F'/%3E%3C/svg%3E%0A");
     width: 32px;
     height: 32px
+}
+
+.datepicker-cell.selected,.datepicker-cell.selected:hover {
+    background: var(--accent)
+}
+
+.header,.select-wrapper,.select-wrapper select {
+    background: var(--white)
 }
 
 .textarea {
@@ -2005,16 +2332,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     opacity: 0
 }
 
-.select-wrapper {
-    position: relative;
-    background: var(--white)
-}
-
 .select-wrapper select {
     width: 100%;
-    padding: 19px 25px;
-    font-weight: 300;
-    line-height: 125%;
+    padding: 20px 25px;
+    min-height: 60px;
     cursor: pointer;
     -webkit-appearance: none
 }
@@ -2033,8 +2354,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 .header,.header__nav,.header__nav--body::before {
     left: 0;
     top: 0;
-    width: 100%;
-    background: var(--white)
+    width: 100%
 }
 
 .header {
@@ -2052,8 +2372,12 @@ input:focus::placeholder,textarea:focus::placeholder {
     max-width: 150px;
     position: relative;
     z-index: 3;
-    -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0)
+}
+
+.header__nav,.header__nav--list>li>ul {
+    position: absolute;
+    background: var(--white)
 }
 
 .header__logo--img {
@@ -2061,12 +2385,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .header__nav {
-    position: absolute;
     height: var(--height-screen,100vh);
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 0;
-    visibility: hidden;
     transition: opacity .3s ease,visibility .3s ease
 }
 
@@ -2084,9 +2406,9 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .header__nav--body::before {
-    content: "";
     position: fixed;
     height: var(--height-header);
+    background: var(--white);
     z-index: 2
 }
 
@@ -2108,12 +2430,15 @@ input:focus::placeholder,textarea:focus::placeholder {
     color: var(--accent)
 }
 
+.header__nav--list>li>a,.hero__explore {
+    color: var(--text-color);
+    text-transform: uppercase
+}
+
 .header__nav--list>li>a {
     width: 100%;
     display: block;
     padding: 10px 40px;
-    color: var(--text-color);
-    text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 150%;
     font-weight: 500;
@@ -2131,7 +2456,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 .header__nav--list>li>ul {
     display: flex;
     flex-direction: column;
-    position: absolute;
     right: 50%;
     top: 100%;
     -webkit-transform: translate(50%,0);
@@ -2139,7 +2463,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     z-index: 2;
     box-shadow: 0 0 20px rgba(0,0,0,.1);
     border-radius: 4px;
-    background: var(--white);
     transition: opacity .3s ease,visibility .3s ease;
     opacity: 0;
     visibility: hidden;
@@ -2148,6 +2471,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .header__nav--list>li>ul>li {
     text-align: left
+}
+
+.about__content,.footer__contact,.footer__copy,.footer__text,.hero__explore,.hero__title,.pricing__card,.pricing__header,.section-nav__card,.section-text-nav,.stories__card {
+    text-align: center
 }
 
 .header__nav--list>li>ul>li>a {
@@ -2180,7 +2507,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .header__burger::before {
-    content: "";
     position: absolute;
     left: 50%;
     top: 50%;
@@ -2234,12 +2560,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     visibility: hidden
 }
 
-.album-slider__slide--image::after,.info-hero__bg::after {
-    opacity: .1;
-    height: 100%;
-    content: ""
-}
-
 .header__burger._mob-menu-active span:nth-child(3) {
     top: 50%;
     -webkit-transform: translate3d(0,-50%,0) rotate(-45deg);
@@ -2260,7 +2580,9 @@ input:focus::placeholder,textarea:focus::placeholder {
     left: 0;
     top: 0;
     width: 100%;
-    background: var(--text-color)
+    height: 100%;
+    background: var(--text-color);
+    opacity: .1
 }
 
 .album-slider__nav {
@@ -2281,8 +2603,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .info-hero__bg,.info-hero__bg img,.info-hero__bg::after {
     position: absolute;
-    left: 0;
-    top: 0
+    top: 0;
+    left: 0
 }
 
 .experience__image,.hero__row {
@@ -2382,7 +2704,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     font-weight: 500;
     font-size: .875rem;
     line-height: 200%;
-    padding-left: var(--container-padding);
     padding-right: 30px
 }
 
@@ -2393,10 +2714,8 @@ input:focus::placeholder,textarea:focus::placeholder {
     flex-direction: column;
     align-items: center;
     background: rgba(0,0,0,0);
-    text-transform: uppercase;
     font-size: 1.125rem;
-    line-height: 166.666667%;
-    color: var(--text-color)
+    line-height: 166.666667%
 }
 
 .hero__explore svg {
@@ -2435,7 +2754,9 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .info-hero__bg::after {
     width: 100%;
+    height: 100%;
     background: var(--text-color);
+    opacity: .1;
     pointer-events: none
 }
 
@@ -2461,17 +2782,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .info-hero__nav {
     position: relative;
-    margin-left: max(var(--container-padding),50% - 760px)
-}
-
-.index-hero__bg-slider,.index-hero__bg-slider::after {
-    position: absolute;
-    width: 100%;
-    background: var(--text-color)
+    margin-left: max(0,50% - 760px)
 }
 
 .info-hero__nav::before {
-    content: "";
     position: absolute;
     right: 100%;
     top: 0;
@@ -2488,7 +2802,16 @@ input:focus::placeholder,textarea:focus::placeholder {
     display: inline-flex;
     background: var(--white);
     margin: 0 0 0 -20px;
-    padding-right: 20px
+    padding-right: 20px;
+    padding-left: 20px
+}
+
+.index-hero__bg-slider,.index-hero__bg-slider::after {
+    position: absolute;
+    height: 100%;
+    background: var(--text-color);
+    width: 100%;
+    top: 0
 }
 
 .info-hero__nav--body a {
@@ -2517,16 +2840,11 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .index-hero__bg-slider {
-    left: 0;
-    top: 0;
-    height: 100%
+    left: 0
 }
 
 .index-hero__bg-slider::after {
-    content: "";
     left: 0;
-    top: 0;
-    height: 100%;
     opacity: .6;
     z-index: 2;
     pointer-events: none
@@ -2585,15 +2903,12 @@ input:focus::placeholder,textarea:focus::placeholder {
     margin: 0 -12px
 }
 
-.index-hero__nav--btn,.kind-words__slider--arrow {
-    background: rgba(0,0,0,0);
-    margin: 0 12px;
-    fill: var(--white)
-}
-
 .index-hero__nav--btn {
     position: static;
-    width: 80px
+    margin: 0 12px;
+    width: 80px;
+    background: rgba(0,0,0,0);
+    fill: var(--white)
 }
 
 .index-hero__nav--btn::after {
@@ -2819,7 +3134,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .kind-words__slider-nav::after {
-    content: "";
     position: absolute;
     left: 0;
     bottom: 1px;
@@ -2845,7 +3159,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .kind-words__slider-nav--slide::before {
-    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -2881,14 +3194,17 @@ input:focus::placeholder,textarea:focus::placeholder {
     display: flex
 }
 
-.footer__nav,.kind-words__slider--arrow::after,.mejs__time {
-    display: none
-}
-
 .kind-words__slider--arrow {
+    fill: var(--white);
+    background: rgba(0,0,0,0);
     position: static;
+    margin: 0 12px;
     width: 81px;
     height: 45px
+}
+
+.kind-words__slider--arrow::after {
+    display: none
 }
 
 .kind-words__slide {
@@ -2898,9 +3214,9 @@ input:focus::placeholder,textarea:focus::placeholder {
 .kind-words__slide--bg,.kind-words__slide--bg img,.kind-words__slide--bg::after {
     position: absolute;
     width: 100%;
-    height: 100%;
     top: 0;
-    left: 0
+    left: 0;
+    height: 100%
 }
 
 .kind-words__slide--bg {
@@ -2908,7 +3224,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .kind-words__slide--bg::after {
-    content: "";
     background: var(--text-color);
     opacity: .5;
     pointer-events: none
@@ -3078,14 +3393,11 @@ input:focus::placeholder,textarea:focus::placeholder {
     color: var(--accent)
 }
 
-.share h3,.story-page__forward {
-    font-weight: 500;
-    text-transform: uppercase
-}
-
 .story-page__forward {
     font-family: Inter,sans-serif;
+    font-weight: 500;
     display: inline-block;
+    text-transform: uppercase;
     color: var(--gray);
     margin-top: 20px;
     font-size: 1.125rem;
@@ -3188,6 +3500,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .share h3 {
     padding-right: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
     font-size: 1.625rem;
     line-height: 115.384615%
 }
@@ -3197,6 +3511,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     flex-wrap: wrap;
     align-items: center;
     margin: -12.5px
+}
+
+.footer__nav,.mejs__time {
+    display: none
 }
 
 .share ul a {
@@ -3272,11 +3590,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     margin: 0 5px
 }
 
-.process__block--list h3::before,.process__block--list li::before {
-    content: "";
-    background: var(--text-color)
-}
-
 .mejs__captions-button {
     order: 10
 }
@@ -3333,6 +3646,11 @@ input:focus::placeholder,textarea:focus::placeholder {
     color: var(--text-color)
 }
 
+.faq__question,.process__title {
+    line-height: 150%;
+    font-size: 1.5rem
+}
+
 .mejs__horizontal-volume-total {
     cursor: pointer;
     width: 52px;
@@ -3369,6 +3687,11 @@ input:focus::placeholder,textarea:focus::placeholder {
     background: #d9d9d9
 }
 
+.process__block--list h3::before,.process__block--list li::before {
+    content: "";
+    background: var(--text-color)
+}
+
 .process__list {
     counter-reset: block_number
 }
@@ -3382,7 +3705,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .process__block--list {
-    grid-row: 2/4;
     padding: 30px 0 0;
     display: flex;
     flex-direction: column
@@ -3423,7 +3745,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 .process__block--list h3::before {
     position: absolute;
     left: 0;
-    top: 12px;
+    top: 11px;
     width: 15px;
     height: 15px
 }
@@ -3434,11 +3756,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     font-weight: 300;
     padding-top: 0;
     padding-left: 40px
-}
-
-.faq__question,.process__title {
-    font-size: 1.5rem;
-    line-height: 150%
 }
 
 .process__block--list p:not(:nth-child(2)) {
@@ -3466,17 +3783,17 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .process__number::before {
-    counter-increment: block_number
+    counter-increment: block_number;
+    content: counter(block_number) "."
 }
 
 .explained__content figure::after,.pre-explained__content figure::after,.process__image--body::after,.service-block__image--body::after,.service-packages__card figure::after,.wedding-photo-albums__image--body::after {
     content: "";
     background: var(--text-color);
     opacity: .1;
-    pointer-events: none;
     left: 0;
     top: 0;
-    width: 100%
+    pointer-events: none
 }
 
 .process__title {
@@ -3516,6 +3833,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .process__image--body::after {
     position: absolute;
+    width: 100%;
     height: 100%
 }
 
@@ -3664,6 +3982,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .pre-explained__content figure::after {
     position: absolute;
+    width: 100%;
     height: 100%
 }
 
@@ -3736,6 +4055,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .explained__content figure::after {
     position: absolute;
+    width: 100%;
     height: 100%
 }
 
@@ -3821,6 +4141,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .service-packages__card figure::after {
     position: absolute;
+    width: 100%;
     height: 100%
 }
 
@@ -3871,10 +4192,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     padding: 40px 0
 }
 
-.extras,.features,.get-in-touch__label,.section-pricing__item {
-    flex-direction: column
-}
-
 .service-packages__chat-card--title {
     font-size: 1.5rem;
     line-height: 150%
@@ -3885,7 +4202,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .extras {
-    display: flex
+    display: flex;
+    flex-direction: column
 }
 
 .extras__title {
@@ -3953,6 +4271,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .service-block__image--body::after {
     position: absolute;
+    width: 100%;
     height: 100%
 }
 
@@ -3988,7 +4307,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .section-pricing__item {
     padding: 40px 0;
-    display: flex
+    display: flex;
+    flex-direction: column
 }
 
 .section-pricing__item:not(:last-child) {
@@ -4017,7 +4337,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .features {
-    display: flex
+    display: flex;
+    flex-direction: column
 }
 
 .features__title {
@@ -4059,6 +4380,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .wedding-photo-albums__image--body::after {
     position: absolute;
+    width: 100%;
     height: 100%
 }
 
@@ -4086,6 +4408,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 .few-steps__item {
     display: flex;
     flex-direction: column-reverse
+}
+
+.get-in-touch,.get-in-touch__form--row,.thank-you {
+    display: grid
 }
 
 .few-steps__item--image {
@@ -4122,10 +4448,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     content: counter(step_number) "."
 }
 
-.get-in-touch {
-    display: grid
-}
-
 .get-in-touch__image {
     margin: 0 calc(0px - var(--container-padding));
     min-height: 300px
@@ -4151,7 +4473,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .get-in-touch__form--row {
-    display: grid;
     gap: 25px
 }
 
@@ -4160,7 +4481,14 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .get-in-touch__label {
-    display: flex
+    display: flex;
+    flex-direction: column
+}
+
+.get-in-touch__label--wrapper {
+    display: flex;
+    position: relative;
+    background: var(--white)
 }
 
 .get-in-touch__name {
@@ -4176,14 +4504,17 @@ input:focus::placeholder,textarea:focus::placeholder {
     color: var(--accent)
 }
 
+.get-in-touch__input-icon {
+    fill: var(--accent);
+    align-self: center;
+    margin: 0 20px;
+    pointer-events: none
+}
+
 .get-in-touch__submit {
     max-width: 220px;
     width: 100%;
     margin-top: 5px
-}
-
-.thank-you {
-    display: grid
 }
 
 .thank-you__image {
@@ -4800,6 +5131,10 @@ input:focus::placeholder,textarea:focus::placeholder {
         gap: 0 30px
     }
 
+    .footer__to-top,.section-pricing__item:not(:last-child) {
+        border-bottom: 0
+    }
+
     .main {
         padding-bottom: 170px
     }
@@ -4852,6 +5187,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 
     .section-padding-top-large {
         padding-top: 200px
+    }
+
+    .page-nav {
+        padding-top: 75px
     }
 
     .page-nav__arrow {
@@ -5205,6 +5544,10 @@ input:focus::placeholder,textarea:focus::placeholder {
         grid-template-columns: 60% auto
     }
 
+    .process__block--list {
+        grid-row: 2/4
+    }
+
     .process__block--list li:last-child {
         padding-top: 30px;
         padding-bottom: 100px
@@ -5476,10 +5819,6 @@ input:focus::placeholder,textarea:focus::placeholder {
         border-right: 1px solid var(--text-color)
     }
 
-    .section-pricing__item:not(:last-child) {
-        border-bottom: 0
-    }
-
     .section-pricing__item:nth-child(2n+2) {
         border-right: 0
     }
@@ -5549,7 +5888,6 @@ input:focus::placeholder,textarea:focus::placeholder {
         width: auto;
         border-left: 1px solid var(--white);
         padding: 27px 40px 27px 27px;
-        border-bottom: 0;
         white-space: nowrap
     }
 
