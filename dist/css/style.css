@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */.swiper-cube,.swiper-flip,button,hr,input {
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input {
     overflow: visible
 }
 
@@ -13,6 +13,14 @@ progress,sub,sup {
 
 .datepicker-picker,.swiper-vertical>.swiper-wrapper,body {
     flex-direction: column
+}
+
+.about__content,.btn,.datepicker-controls .button,.datepicker-title,.footer__contact,.footer__copy,.footer__text,.header__nav--list>li,.hero__explore,.hero__title,.mejs__captions-layer,.mejs__time,.mejs__time-float,.mejs__time-float-current,.pricing__card,.pricing__header,.section-header-content._center,.section-nav__card,.section-text-nav,.stories__card,.swiper-pagination,.swiper-zoom-container,.txt-center {
+    text-align: center
+}
+
+.datepicker-controls .next-button.disabled,.datepicker-controls .prev-button.disabled,.header__nav,.swiper-cube .swiper-slide,.swiper-slide-invisible-blank {
+    visibility: hidden
 }
 
 body {
@@ -200,10 +208,6 @@ summary {
     transition-property: transform;
     transition-property: transform,-webkit-transform;
     display: block
-}
-
-.swiper-slide-invisible-blank {
-    visibility: hidden
 }
 
 .swiper-autoheight,.swiper-autoheight .swiper-slide {
@@ -471,7 +475,6 @@ summary {
 
 .swiper-pagination {
     position: absolute;
-    text-align: center;
     transition: .3s opacity;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -496,6 +499,10 @@ summary {
 .swiper-pagination-bullets-dynamic {
     overflow: hidden;
     font-size: 0
+}
+
+.swiper-cube,.swiper-flip {
+    overflow: visible
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
@@ -545,6 +552,10 @@ button.swiper-pagination-bullet {
     box-shadow: none;
     -webkit-appearance: none;
     appearance: none
+}
+
+.swiper-scrollbar,.swiper-scrollbar-drag {
+    border-radius: var(--swiper-scrollbar-border-radius,10px)
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -604,6 +615,10 @@ button.swiper-pagination-bullet {
     transition: .2s transform,.2s right
 }
 
+.swiper-fade.swiper-free-mode .swiper-slide,.swiper-free-mode>.swiper-wrapper {
+    transition-timing-function: ease-out
+}
+
 .swiper-pagination-fraction {
     color: var(--swiper-pagination-fraction-color,inherit)
 }
@@ -650,7 +665,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-scrollbar {
-    border-radius: var(--swiper-scrollbar-border-radius,10px);
     position: relative;
     -ms-touch-action: none;
     background: var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))
@@ -689,7 +703,6 @@ button.swiper-pagination-bullet {
     width: 100%;
     position: relative;
     background: var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));
-    border-radius: var(--swiper-scrollbar-border-radius,10px);
     left: 0;
     top: 0
 }
@@ -703,8 +716,7 @@ button.swiper-pagination-bullet {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center
+    align-items: center
 }
 
 .swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg {
@@ -729,7 +741,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-free-mode>.swiper-wrapper {
-    transition-timing-function: ease-out;
     margin: 0 auto
 }
 
@@ -740,10 +751,6 @@ button.swiper-pagination-bullet {
 .swiper-grid-column>.swiper-wrapper {
     flex-wrap: wrap;
     flex-direction: column
-}
-
-.swiper-fade.swiper-free-mode .swiper-slide {
-    transition-timing-function: ease-out
 }
 
 .swiper-fade .swiper-slide {
@@ -764,7 +771,6 @@ button.swiper-pagination-bullet {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     z-index: 1;
-    visibility: hidden;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
     width: 100%;
@@ -884,10 +890,6 @@ button.swiper-pagination-bullet {
     text-align: left;
     text-indent: 0;
     vertical-align: top
-}
-
-.about__content,.btn,.datepicker-controls .button,.datepicker-title,.footer__contact,.footer__copy,.footer__text,.header__nav--list>li,.hero__explore,.hero__title,.mejs__captions-layer,.mejs__time,.mejs__time-float,.mejs__time-float-current,.pricing__card,.pricing__header,.section-header-content._center,.section-nav__card,.section-text-nav,.stories__card,.txt-center {
-    text-align: center
 }
 
 .mejs__container video::-webkit-media-controls,.mejs__container video::-webkit-media-controls-panel,.mejs__container video::-webkit-media-controls-panel-container,.mejs__container video::-webkit-media-controls-start-playback-button {
@@ -1227,19 +1229,16 @@ button.swiper-pagination-bullet {
     width: 1.875rem
 }
 
-.mejs__time-float-corner,.mejs__volume-button>.mejs__volume-slider,.mejs__volume-total {
-    left: 50%;
-    -webkit-transform: translateX(-50%)
-}
-
 .mejs__time-float-corner {
     border: .3125rem solid #eee;
     border-color: #eee transparent transparent;
     border-radius: 0;
     display: block;
+    left: 50%;
     line-height: 0;
     position: absolute;
     top: 100%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 0
 }
@@ -1272,8 +1271,10 @@ button.swiper-pagination-bullet {
     bottom: 100%;
     display: none;
     height: 7.1875rem;
+    left: 50%;
     margin: 0;
     position: absolute;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 1.5625rem;
     z-index: 1
@@ -1287,9 +1288,11 @@ button.swiper-pagination-bullet {
     background: rgba(255,255,255,.5);
     border: .06rem solid #fff;
     height: 6.25rem;
+    left: 50%;
     margin: 0;
     position: absolute;
     top: .5rem;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: .125rem
 }
@@ -1377,10 +1380,6 @@ button.swiper-pagination-bullet {
     right: 50%;
     visibility: visible;
     width: 5.375rem
-}
-
-.datepicker-controls .next-button.disabled,.datepicker-controls .prev-button.disabled,.header__nav {
-    visibility: hidden
 }
 
 .mejs__chapters-button>.mejs__chapters-selector {
@@ -1719,8 +1718,8 @@ button.swiper-pagination-bullet {
 }
 
 .image-body img,.image-body::after,body,html {
-    height: 100%;
-    width: 100%
+    width: 100%;
+    height: 100%
 }
 
 .datepicker-cell:not(.disabled):hover {
@@ -2056,6 +2055,10 @@ section {
     overflow: hidden
 }
 
+.page-nav__arrow,.select-wrapper {
+    position: relative
+}
+
 .more-content-wrapper p:nth-child(n+3) {
     display: none
 }
@@ -2104,8 +2107,7 @@ section {
     font-weight: 500;
     font-size: .875rem;
     line-height: 115.384615%;
-    transition: opacity .3s ease;
-    position: relative
+    transition: opacity .3s ease
 }
 
 .page-nav__arrow._disabled {
@@ -2160,10 +2162,6 @@ section {
     pointer-events: none
 }
 
-.accent-span,.header__nav--list>li.current_page_ancestor>a,.header__nav--list>li.current_page_ancestor>ul>li.current_page_item a,.header__nav--list>li.current_page_item>a {
-    color: var(--accent)
-}
-
 .page-nav__list>:not(.current) {
     pointer-events: auto;
     transition: opacity .3s ease
@@ -2183,16 +2181,14 @@ section {
     font-size: 1.875rem
 }
 
-.number::before,.title,.title._min {
-    font-size: 2.25rem
-}
-
 .title {
     font-weight: 400;
+    font-size: 2.25rem;
     line-height: 108.333333%
 }
 
 .title._min {
+    font-size: 2.25rem;
     line-height: 138.888889%
 }
 
@@ -2203,7 +2199,8 @@ section {
 .accent-span {
     font-weight: 500;
     font-size: 1.125rem;
-    line-height: 163.636364%
+    line-height: 163.636364%;
+    color: var(--accent)
 }
 
 .section-title {
@@ -2223,9 +2220,14 @@ p {
     counter-increment: block_number;
     content: counter(block_number) ".";
     display: block;
+    font-size: 2.25rem;
     line-height: 78.26087%;
     color: var(--text-color);
     padding-bottom: 19px
+}
+
+.header__burger::before,.header__nav--body::before,.index-hero__bg-slider::after,.info-hero__bg::after,.info-hero__nav::before,.kind-words__slide--bg::after,.kind-words__slider-nav--slide::before,.kind-words__slider-nav::after {
+    content: ""
 }
 
 .text {
@@ -2279,6 +2281,10 @@ p {
     background: var(--accent)
 }
 
+.header,.header__nav,.header__nav--body::before,.header__nav--list>li>ul,.select-wrapper,.select-wrapper select {
+    background: var(--white)
+}
+
 .datepicker-input.in-edit:active,.datepicker-input.in-edit:focus {
     box-shadow: none
 }
@@ -2327,16 +2333,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     opacity: 0
 }
 
-.select-wrapper {
-    position: relative;
-    background: var(--white)
-}
-
 .select-wrapper select {
     width: 100%;
     padding: 20px 25px;
     min-height: 60px;
-    background: var(--white);
     cursor: pointer;
     -webkit-appearance: none
 }
@@ -2355,8 +2355,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 .header,.header__nav,.header__nav--body::before {
     left: 0;
     top: 0;
-    width: 100%;
-    background: var(--white)
+    width: 100%
 }
 
 .header {
@@ -2406,7 +2405,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .header__nav--body::before {
-    content: "";
     position: fixed;
     height: var(--height-header);
     z-index: 2
@@ -2424,6 +2422,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 .header__nav--list>li {
     width: 100%;
     position: relative
+}
+
+.header__nav--list>li.current_page_ancestor>a,.header__nav--list>li.current_page_ancestor>ul>li.current_page_item a,.header__nav--list>li.current_page_item>a {
+    color: var(--accent)
 }
 
 .header__nav--list>li>a {
@@ -2457,7 +2459,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     z-index: 2;
     box-shadow: 0 0 20px rgba(0,0,0,.1);
     border-radius: 4px;
-    background: var(--white);
     transition: opacity .3s ease,visibility .3s ease;
     opacity: 0;
     visibility: hidden;
@@ -2499,7 +2500,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .header__burger::before {
-    content: "";
     position: absolute;
     left: 50%;
     top: 50%;
@@ -2553,12 +2553,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     visibility: hidden
 }
 
-.album-slider__slide--image::after,.info-hero__bg::after {
-    opacity: .1;
-    left: 0;
-    content: ""
-}
-
 .header__burger._mob-menu-active span:nth-child(3) {
     top: 50%;
     -webkit-transform: translate3d(0,-50%,0) rotate(-45deg);
@@ -2571,21 +2565,21 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .album-slider__slide {
-    height: auto;
-    display: flex;
-    align-items: center
+    height: auto
 }
 
 .album-slider__slide--image {
     width: 100%
 }
 
+.album-slider__slide--image img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    background: rgba(0,0,0,0)
+}
+
 .album-slider__slide--image::after {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--text-color)
+    display: none
 }
 
 .album-slider__nav {
@@ -2756,10 +2750,12 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .info-hero__bg::after {
     position: absolute;
+    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: var(--text-color);
+    opacity: .1;
     pointer-events: none
 }
 
@@ -2791,7 +2787,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .info-hero__nav::before {
-    content: "";
     position: absolute;
     right: calc(100% - 1px);
     top: 0;
@@ -2851,7 +2846,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .index-hero__bg-slider::after {
-    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -3147,7 +3141,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .kind-words__slider-nav::after {
-    content: "";
     position: absolute;
     left: 0;
     bottom: 1px;
@@ -3173,7 +3166,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .kind-words__slider-nav--slide::before {
-    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -3239,7 +3231,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .kind-words__slide--bg::after {
-    content: "";
     background: var(--text-color);
     opacity: .5;
     pointer-events: none
@@ -3303,8 +3294,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .portfolio__grid {
-    margin: 0 -10px -20px;
-    width: calc(100% + 20px);
+    margin: 0 10px -20px;
+    width: calc(100% - 20px);
     display: flex;
     flex-wrap: wrap
 }
@@ -5305,10 +5296,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     .album-slider {
         padding: 0 23.9%;
         margin-top: 40px
-    }
-
-    .album-slider__slide--image {
-        min-height: 100%
     }
 
     .album-slider__nav {
