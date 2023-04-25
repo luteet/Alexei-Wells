@@ -255,7 +255,7 @@ let kindWordsSliderNav = new Swiper('.kind-words__slider-nav', {
 
 	spaceBetween: 50,
 	slidesPerView: "auto",
-	freeMode: true,
+	//freeMode: true,
 
 	breakpoints: {
 		992: {
@@ -264,6 +264,10 @@ let kindWordsSliderNav = new Swiper('.kind-words__slider-nav', {
 	}
 
 });
+
+setTimeout(() => {
+	
+},2500)
 
 
 let kindWordsSlider = new Swiper('.kind-words__slider', {
@@ -289,6 +293,10 @@ let kindWordsSlider = new Swiper('.kind-words__slider', {
 	}
 
 });
+
+kindWordsSlider.on("slideChange", function () {
+	kindWordsSliderNav.slideTo(kindWordsSlider.realIndex,300)
+})
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
