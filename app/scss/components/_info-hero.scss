@@ -65,11 +65,14 @@
 	&__nav {
 
 		position: relative;
-		margin-left: max(0px, calc(50% - #{math.div($container, 2)}px));
+		@include _992 {
+			margin-left: max(1px, calc(50% - #{math.div($container, 2)}px));
+			transform: translate(-1px, 0);
+		}
 		&::before {
 			content: '';
 			position: absolute;
-			right: 100%; top: 0;
+			right: calc(100% - 1px); top: 0;
 			width: 100vw; height: 100%;
 			background: var(--white);
 		}

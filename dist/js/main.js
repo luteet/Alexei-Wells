@@ -103,9 +103,22 @@ body.addEventListener('click', function (event) {
 		if(getDeviceType() != "desktop" && headerNavListLink.parentElement.querySelector('ul')) {
 			if(!headerNavListLink.classList.contains('active')) {
 				event.preventDefault();
+
+				const headerNavListActiveLink = document.querySelectorAll('.header__nav--list > li > a.active');
+				headerNavListActiveLink.forEach(link => {
+					link.classList.remove('active');
+				})
+
+				headerNavListLink.classList.add('active');
+
+			} else {
+				const headerNavListActiveLink = document.querySelectorAll('.header__nav--list > li > a.active');
+				headerNavListActiveLink.forEach(link => {
+					link.classList.remove('active');
+				})
 			}
 
-			headerNavListLink.classList.toggle('active');
+			
 		}
 	
 	} else if(document.querySelector('.header__nav--list > li > a.active')) {
@@ -357,10 +370,11 @@ var player = new MediaElementPlayer('player', {
 	console.log(player.currentTime);
 },3000) */
 
-const elem = document.querySelector('.date-input');
-const datepicker = new Datepicker(elem, {
-  // ...options
-}); 
+const dateInputs = document.querySelectorAll('.date-input');
+dateInputs.forEach(dateInput => {
+	const datepicker = new Datepicker(dateInput); 
+})
+
 
 /* 
 // =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=

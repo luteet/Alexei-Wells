@@ -13,7 +13,7 @@
 
 	@include _992 {
 		display: grid;
-		grid-template-columns: 30% auto min-content;
+		grid-template-columns: 32% auto min-content;
 		
 		padding-top: 80px; padding-bottom: 44px;
 		&._min {
@@ -146,6 +146,8 @@
 
 	&__contact {
 
+		align-self: center;
+
 		white-space: nowrap;
 		text-align: center;
 
@@ -214,7 +216,7 @@
 		// .footer__nav--list
 
 		&--list {
-			padding-right: 33px;
+			padding-right: 22px;
 			justify-self: end;
 
 			display: flex;
