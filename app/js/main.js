@@ -231,6 +231,7 @@ let albumSlider = new Swiper('.album-slider', {
 	spaceBetween: 10,
 	slidesPerView: 1,
 	centeredSlides: true,
+	//autoHeight: true,
 
 	loop: true,
 	loopedSlides: 2,
@@ -243,6 +244,7 @@ let albumSlider = new Swiper('.album-slider', {
 	breakpoints: {
 		992: {
 			spaceBetween: 30,
+			//autoHeight: false,
 		},
 	}
 
@@ -268,6 +270,7 @@ let kindWordsSlider = new Swiper('.kind-words__slider', {
 
 	spaceBetween: 0,
 	slidesPerView: 1,
+	autoHeight: true,
 
 	loop: true,
 
@@ -373,6 +376,14 @@ var player = new MediaElementPlayer('player', {
 const dateInputs = document.querySelectorAll('.date-input');
 dateInputs.forEach(dateInput => {
 	const datepicker = new Datepicker(dateInput); 
+})
+
+const infoHeroNav = document.querySelectorAll('.info-hero__nav');
+infoHeroNav.forEach(infoHeroNav => {
+	const infoHeroNavBody = infoHeroNav.querySelector('.info-hero__nav--body');
+
+	//console.log(list.querySelector('.current_page_item').offsetLeft)
+	infoHeroNavBody.scroll({left: infoHeroNavBody.querySelector('.current_page_item').offsetLeft - 35, top: 0});
 })
 
 

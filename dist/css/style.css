@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input {
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */.swiper-cube,.swiper-flip,button,hr,input {
     overflow: visible
 }
 
@@ -200,10 +200,6 @@ summary {
     transition-property: transform;
     transition-property: transform,-webkit-transform;
     display: block
-}
-
-.swiper-button-lock,.swiper-pagination-lock {
-    display: none
 }
 
 .swiper-slide-invisible-blank {
@@ -469,6 +465,10 @@ summary {
     content: "next"
 }
 
+.swiper-button-lock {
+    display: none
+}
+
 .swiper-pagination {
     position: absolute;
     text-align: center;
@@ -496,10 +496,6 @@ summary {
 .swiper-pagination-bullets-dynamic {
     overflow: hidden;
     font-size: 0
-}
-
-.swiper-cube,.swiper-flip {
-    overflow: visible
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
@@ -608,10 +604,6 @@ button.swiper-pagination-bullet {
     transition: .2s transform,.2s right
 }
 
-.swiper-fade.swiper-free-mode .swiper-slide,.swiper-free-mode>.swiper-wrapper {
-    transition-timing-function: ease-out
-}
-
 .swiper-pagination-fraction {
     color: var(--swiper-pagination-fraction-color,inherit)
 }
@@ -651,6 +643,10 @@ button.swiper-pagination-bullet {
     height: 100%;
     left: 0;
     top: 0
+}
+
+.swiper-pagination-lock {
+    display: none
 }
 
 .swiper-scrollbar {
@@ -733,6 +729,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-free-mode>.swiper-wrapper {
+    transition-timing-function: ease-out;
     margin: 0 auto
 }
 
@@ -743,6 +740,10 @@ button.swiper-pagination-bullet {
 .swiper-grid-column>.swiper-wrapper {
     flex-wrap: wrap;
     flex-direction: column
+}
+
+.swiper-fade.swiper-free-mode .swiper-slide {
+    transition-timing-function: ease-out
 }
 
 .swiper-fade .swiper-slide {
@@ -1226,16 +1227,19 @@ button.swiper-pagination-bullet {
     width: 1.875rem
 }
 
+.mejs__time-float-corner,.mejs__volume-button>.mejs__volume-slider,.mejs__volume-total {
+    left: 50%;
+    -webkit-transform: translateX(-50%)
+}
+
 .mejs__time-float-corner {
     border: .3125rem solid #eee;
     border-color: #eee transparent transparent;
     border-radius: 0;
     display: block;
-    left: 50%;
     line-height: 0;
     position: absolute;
     top: 100%;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 0
 }
@@ -1268,10 +1272,8 @@ button.swiper-pagination-bullet {
     bottom: 100%;
     display: none;
     height: 7.1875rem;
-    left: 50%;
     margin: 0;
     position: absolute;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 1.5625rem;
     z-index: 1
@@ -1285,11 +1287,9 @@ button.swiper-pagination-bullet {
     background: rgba(255,255,255,.5);
     border: .06rem solid #fff;
     height: 6.25rem;
-    left: 50%;
     margin: 0;
     position: absolute;
     top: .5rem;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: .125rem
 }
@@ -1328,7 +1328,7 @@ button.swiper-pagination-bullet {
     display: none
 }
 
-.mejs__horizontal-volume-current,.mejs__horizontal-volume-total {
+.mejs__horizontal-volume-total {
     font-size: 1px;
     left: 0;
     margin: 0;
@@ -1339,7 +1339,12 @@ button.swiper-pagination-bullet {
 .mejs__horizontal-volume-current {
     border-radius: .125rem;
     border-right: .06rem solid #fff;
+    font-size: 1px;
     height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
     top: 0;
     width: 100%
 }
@@ -1946,6 +1951,10 @@ body {
     display: flex
 }
 
+.explained__content h2,.main-title,.number::before,.photographer__services--title,.pricing__card--title,.section-title,.title {
+    font-family: var(--title-font)
+}
+
 body._mob-menu-active,body._popup-active {
     overflow: hidden
 }
@@ -2071,11 +2080,6 @@ section {
     line-height: 200%
 }
 
-.page-nav__arrow,.share h3 {
-    line-height: 115.384615%;
-    text-transform: uppercase
-}
-
 .section-header-content__text p {
     padding-top: 0
 }
@@ -2096,8 +2100,10 @@ section {
     display: flex;
     align-items: center;
     color: var(--dark);
+    text-transform: uppercase;
     font-weight: 500;
     font-size: .875rem;
+    line-height: 115.384615%;
     transition: opacity .3s ease;
     position: relative
 }
@@ -2154,6 +2160,10 @@ section {
     pointer-events: none
 }
 
+.accent-span,.header__nav--list>li.current_page_ancestor>a,.header__nav--list>li.current_page_ancestor>ul>li.current_page_item a,.header__nav--list>li.current_page_item>a {
+    color: var(--accent)
+}
+
 .page-nav__list>:not(.current) {
     pointer-events: auto;
     transition: opacity .3s ease
@@ -2168,21 +2178,21 @@ section {
 }
 
 .main-title {
-    font-family: var(--title-font);
     font-weight: 700;
     line-height: 115%;
     font-size: 1.875rem
 }
 
+.number::before,.title,.title._min {
+    font-size: 2.25rem
+}
+
 .title {
-    font-family: var(--title-font);
     font-weight: 400;
-    font-size: 2.25rem;
     line-height: 108.333333%
 }
 
 .title._min {
-    font-size: 2.25rem;
     line-height: 138.888889%
 }
 
@@ -2193,12 +2203,10 @@ section {
 .accent-span {
     font-weight: 500;
     font-size: 1.125rem;
-    line-height: 163.636364%;
-    color: var(--accent)
+    line-height: 163.636364%
 }
 
 .section-title {
-    font-family: var(--title-font);
     font-weight: 700
 }
 
@@ -2215,8 +2223,6 @@ p {
     counter-increment: block_number;
     content: counter(block_number) ".";
     display: block;
-    font-family: var(--title-font);
-    font-size: 2.25rem;
     line-height: 78.26087%;
     color: var(--text-color);
     padding-bottom: 19px
@@ -2420,10 +2426,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     position: relative
 }
 
-.header__nav--list>li.current_page_ancestor>a,.header__nav--list>li.current_page_ancestor>ul>li.current_page_item a,.header__nav--list>li.current_page_item>a {
-    color: var(--accent)
-}
-
 .header__nav--list>li>a {
     width: 100%;
     display: block;
@@ -2553,7 +2555,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .album-slider__slide--image::after,.info-hero__bg::after {
     opacity: .1;
-    height: 100%;
+    left: 0;
     content: ""
 }
 
@@ -2568,19 +2570,21 @@ input:focus::placeholder,textarea:focus::placeholder {
     margin-top: 30px
 }
 
-.album-slider__slide--image {
-    min-height: 300px
+.album-slider__slide {
+    height: auto;
+    display: flex;
+    align-items: center
 }
 
-.hero,.index-hero__slider,.info-hero {
-    min-height: var(--height-screen-min)
+.album-slider__slide--image {
+    width: 100%
 }
 
 .album-slider__slide--image::after {
     position: absolute;
-    left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
     background: var(--text-color)
 }
 
@@ -2598,12 +2602,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     fill: var(--text-color);
     width: 81px;
     height: 45px
-}
-
-.info-hero__bg,.info-hero__bg img,.info-hero__bg::after {
-    position: absolute;
-    top: 0;
-    left: 0
 }
 
 .experience__image,.hero__row {
@@ -2627,6 +2625,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .hero {
+    min-height: var(--height-screen-min);
     display: grid;
     grid-template-columns: 40% 40% 20%;
     padding-left: 0;
@@ -2678,6 +2677,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 .hero__image--body {
     width: 100%;
     min-height: 100%
+}
+
+.index-hero__slider,.info-hero {
+    min-height: var(--height-screen-min)
 }
 
 .hero__image:nth-child(1) .hero__image--body {
@@ -2739,6 +2742,9 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .info-hero__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -2749,12 +2755,18 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .info-hero__bg::after {
+    position: absolute;
+    top: 0;
     width: 100%;
+    height: 100%;
     background: var(--text-color);
     pointer-events: none
 }
 
 .info-hero__bg img {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -2800,12 +2812,8 @@ input:focus::placeholder,textarea:focus::placeholder {
     padding-left: 20px
 }
 
-.index-hero__bg-slider,.index-hero__bg-slider::after {
-    position: absolute;
-    height: 100%;
-    background: var(--text-color);
-    width: 100%;
-    top: 0
+.info-hero__nav--body li.current_page_item>a {
+    color: var(--accent)
 }
 
 .info-hero__nav--body a {
@@ -2834,13 +2842,23 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .index-hero__bg-slider {
-    left: 0
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--text-color)
 }
 
 .index-hero__bg-slider::after {
     content: "";
+    position: absolute;
     left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     opacity: .6;
+    background: var(--text-color);
     z-index: 2;
     pointer-events: none
 }
@@ -3211,9 +3229,9 @@ input:focus::placeholder,textarea:focus::placeholder {
 .kind-words__slide--bg,.kind-words__slide--bg img,.kind-words__slide--bg::after {
     position: absolute;
     width: 100%;
+    height: 100%;
     top: 0;
-    left: 0;
-    height: 100%
+    left: 0
 }
 
 .kind-words__slide--bg {
@@ -3500,8 +3518,10 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .share h3 {
     padding-right: 29px;
+    text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.625rem
+    font-size: 1.625rem;
+    line-height: 115.384615%
 }
 
 .share ul {
@@ -3668,17 +3688,16 @@ input:focus::placeholder,textarea:focus::placeholder {
     border-radius: 0
 }
 
+.extras__list,.features__list,.pre-explained__content hr {
+    border-top: 1px solid var(--text-color)
+}
+
 .mejs__horizontal-volume-current {
     background: var(--text-color)
 }
 
 .mejs__horizontal-volume-total {
     background: #d9d9d9
-}
-
-.process__block--list h3::before,.process__block--list li::before {
-    content: "";
-    background: var(--text-color)
 }
 
 .process__list {
@@ -3699,20 +3718,22 @@ input:focus::placeholder,textarea:focus::placeholder {
     flex-direction: column
 }
 
+.faq__question,.process__block--list li:not(:first-child),.process__title {
+    padding-top: 30px
+}
+
 .process__block--list li {
     position: relative
 }
 
 .process__block--list li::before {
+    content: "";
     position: absolute;
     left: 7.5px;
     top: 20px;
     width: 1px;
-    height: 100%
-}
-
-.process__block--list li:not(:first-child) {
-    padding-top: 30px
+    height: 100%;
+    background: var(--text-color)
 }
 
 .process__block--list li:last-child {
@@ -3732,11 +3753,13 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .process__block--list h3::before {
+    content: "";
     position: absolute;
     left: 0;
     top: 11px;
     width: 15px;
-    height: 15px
+    height: 15px;
+    background: var(--text-color)
 }
 
 .process__block--list p {
@@ -3748,8 +3771,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .faq__question,.process__title {
-    font-size: 1.5rem;
-    line-height: 150%
+    line-height: 150%;
+    font-size: 1.5rem
 }
 
 .process__block--list p:not(:nth-child(2)) {
@@ -3787,12 +3810,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     opacity: .1;
     left: 0;
     top: 0;
-    pointer-events: none;
     width: 100%
 }
 
 .process__title {
-    padding-top: 30px;
     font-weight: 400
 }
 
@@ -3828,7 +3849,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .process__image--body::after {
     position: absolute;
-    height: 100%
+    height: 100%;
+    pointer-events: none
 }
 
 .process__image--body img {
@@ -3854,10 +3876,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 .faq__number::before {
     counter-increment: faq_number;
     content: counter(faq_number) "."
-}
-
-.faq__question {
-    padding-top: 30px
 }
 
 .faq__answear {
@@ -3906,7 +3924,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .photographer__services--title {
     max-width: 800px;
-    font-family: var(--title-font);
     font-size: 2.25rem;
     line-height: 108%
 }
@@ -3976,7 +3993,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .pre-explained__content figure::after {
     position: absolute;
-    height: 100%
+    height: 100%;
+    pointer-events: none
 }
 
 .pre-explained__content figure img {
@@ -4031,7 +4049,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .pre-explained__content hr {
-    border-top: 1px solid var(--text-color);
     width: 100%;
     margin-top: 40px
 }
@@ -4049,7 +4066,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .explained__content figure::after {
     position: absolute;
-    height: 100%
+    height: 100%;
+    pointer-events: none
 }
 
 .explained__content figure img {
@@ -4064,7 +4082,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .explained__content h2 {
     padding-top: 40px;
-    font-family: var(--title-font);
     font-size: 2.25rem;
     line-height: 108%
 }
@@ -4098,8 +4115,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 .pricing__card--title {
     padding-top: 20px;
     font-size: 2.5rem;
-    line-height: 125%;
-    font-family: var(--title-font)
+    line-height: 125%
 }
 
 .pricing__card--link {
@@ -4134,7 +4150,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .service-packages__card figure::after {
     position: absolute;
-    height: 100%
+    height: 100%;
+    pointer-events: none
 }
 
 .service-packages__card img {
@@ -4184,6 +4201,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     padding: 40px 0
 }
 
+.extras,.features,.get-in-touch__label,.section-pricing__item {
+    flex-direction: column
+}
+
 .service-packages__chat-card--title {
     font-size: 1.5rem;
     line-height: 150%
@@ -4194,8 +4215,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .extras {
-    display: flex;
-    flex-direction: column
+    display: flex
 }
 
 .extras__title {
@@ -4205,7 +4225,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .extras__list {
     flex: 0 1 50%;
-    border-top: 1px solid var(--text-color);
     padding: 40px 0 0 30px;
     list-style: disc;
     font-size: 1rem;
@@ -4264,7 +4283,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .service-block__image--body::after {
     position: absolute;
-    height: 100%
+    height: 100%;
+    pointer-events: none
 }
 
 .service-block__image--body img {
@@ -4299,8 +4319,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .section-pricing__item {
     padding: 40px 0;
-    display: flex;
-    flex-direction: column
+    display: flex
 }
 
 .section-pricing__item:not(:last-child) {
@@ -4329,8 +4348,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .features {
-    display: flex;
-    flex-direction: column
+    display: flex
 }
 
 .features__title {
@@ -4340,7 +4358,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .features__list {
     flex: 0 1 60%;
-    border-top: 1px solid var(--text-color);
     padding: 40px 0 0 30px;
     list-style: disc;
     font-size: 1rem;
@@ -4373,7 +4390,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .wedding-photo-albums__image--body::after {
     position: absolute;
-    height: 100%
+    height: 100%;
+    pointer-events: none
 }
 
 .wedding-photo-albums__image--body img {
@@ -4400,10 +4418,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 .few-steps__item {
     display: flex;
     flex-direction: column-reverse
-}
-
-.get-in-touch,.get-in-touch__form--row,.thank-you {
-    display: grid
 }
 
 .few-steps__item--image {
@@ -4440,6 +4454,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     content: counter(step_number) "."
 }
 
+.get-in-touch {
+    display: grid
+}
+
 .get-in-touch__image {
     margin: 0 calc(0px - var(--container-padding));
     min-height: 300px
@@ -4465,6 +4483,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .get-in-touch__form--row {
+    display: grid;
     gap: 25px
 }
 
@@ -4473,8 +4492,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .get-in-touch__label {
-    display: flex;
-    flex-direction: column
+    display: flex
 }
 
 .get-in-touch__label--wrapper {
@@ -4507,6 +4525,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     max-width: 220px;
     width: 100%;
     margin-top: 5px
+}
+
+.thank-you {
+    display: grid
 }
 
 .thank-you__image {
@@ -4620,12 +4642,6 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .footer__contact li {
     padding: 12.5px 0
-}
-
-.footer__contact a[href*="tel:"] {
-    font-size: 1.125rem;
-    line-height: 100%;
-    font-weight: 500
 }
 
 .footer__nav--list {
@@ -5289,6 +5305,10 @@ input:focus::placeholder,textarea:focus::placeholder {
     .album-slider {
         padding: 0 23.9%;
         margin-top: 40px
+    }
+
+    .album-slider__slide--image {
+        min-height: 100%
     }
 
     .album-slider__nav {

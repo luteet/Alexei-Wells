@@ -16,10 +16,20 @@
 
 	&__slide {
 
+		height: auto;
+
+		display: flex;
+		align-items: center;
+
 		// .album-slider__slide--image
 
 		&--image {
-			min-height: 300px;
+			//min-height: 200px;
+			width: 100%;
+			@include _992 {
+				min-height: 100%;
+			}
+			
 			&::after {
 				content: '';
 				position: absolute;

@@ -1,7 +1,14 @@
 @@include("html/_header.html")
 
 	<main class="main">
-		@@include("html/_info-hero.html")
+		@@include("html/_info-hero.html", {
+			"page_1": "",
+			"page_2": "",
+			"page_3": "",
+			"page_4": "current_page_item",
+			"page_5": "",
+			"page_6": "",
+		})
 		<section class="kind-words container">
 			<div class="kind-words__content info-header section-header-content _column">
 				<h1 class="section-header-content__title title">
